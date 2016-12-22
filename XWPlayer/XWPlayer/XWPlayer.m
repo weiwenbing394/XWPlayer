@@ -31,6 +31,10 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
 @property (nonatomic,assign)CGPoint secondPoint;
 //自动隐藏操作栏定时器
 @property (nonatomic,retain)NSTimer *autoDismissTimer;
+//是否在播放
+@property (nonatomic,assign)BOOL isPlaying;
+//是否是第一次进入
+@property (nonatomic,assign)BOOL firstComing;
 
 
 @property (nonatomic,assign)BOOL slider;
@@ -62,10 +66,17 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
         
         [self addSubview:self.playerView];
         
+        //开始播放
+        [self.player play];
+        
+        self.isPlaying=YES;
+        
+        self.playOrPauseBtn.selected=NO;
+        
         //底部操作栏设置
         self.bottomView=[[UIView alloc]init];
         
-        self.bottomView.backgroundColor=[UIColor clearColor];
+        self.bottomView.backgroundColor=[UIColor colorWithRed:0 green:0 blue:0 alpha:0.7];
         
         [self addSubview:self.bottomView];
         
@@ -274,6 +285,12 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
         //添加监控
         [self addCurrentItemObser];
         
+        //回到前台通知
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(becomActive:)name:UIApplicationDidBecomeActiveNotification object:nil];
+        
+        //退回后台通知
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(backToBackGround:) name:UIApplicationDidEnterBackgroundNotification object:nil];
+        
         [self initTimer];
         
     }
@@ -317,12 +334,9 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
                         
                         self.progressSlider.maximumValue=CMTimeGetSeconds(self.player.currentItem.duration);
                         
-                        [self.indicatorView stopAnimating];
-                        
-                        NSLog(@"开始播放");
-                        //开始播放
-                        [self.player play];
                      }
+                    
+                    [self.indicatorView stopAnimating];
                     
                     //刷新进度条，获取总时长等操作
                     [self initTimer];
@@ -336,14 +350,17 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
                     
                     NSLog(@"播放失败");
                     
-                    [self.indicatorView startAnimating];
-                    
+                    if (self.isPlaying==YES) {
+                        
+                        [self.indicatorView startAnimating];
+                    }
                     break;
                 case AVPlayerItemStatusUnknown:
                     
-                    NSLog(@"未知错误");
-                    
-                    [self.indicatorView startAnimating];
+                    if (self.isPlaying==YES) {
+                        
+                        [self.indicatorView startAnimating];
+                    }
                     
                     break;
                     
@@ -364,15 +381,16 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
         }else if ([keyPath isEqualToString:@"playbackBufferEmpty"]){
             
             NSLog(@"缓存用完");
-            
-            [self.indicatorView startAnimating];
-            
+            if (self.isPlaying==YES) {
+                
+                [self.indicatorView startAnimating];
+            }
             
         }else if ([keyPath isEqualToString:@"playbackLikelyToKeepUp"]) {
             
             [self.indicatorView stopAnimating];
             
-            NSLog(@"缓存开始");
+            NSLog(@"缓存结束，播放开始");
             
         }
         
@@ -425,9 +443,7 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
 
 //播放或者暂停
 - (void)PlayOrPause:(UIButton *)btn{
-    
     btn.selected=!btn.selected;
-    
     if (self.player.rate!=1) {
         if ([self currentTime]==[self duration]) {
             //设置开始播放为开始位置
@@ -435,10 +451,13 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
         }
         //开始播放
         [self.player play];
+        self.isPlaying=YES;
         [self initDissMissTimer];
     }else{
         //暂停播放
         [self.player pause];
+        [self.indicatorView stopAnimating];
+        self.isPlaying=NO;
         [self invalidTimer];
     }
 }
@@ -500,6 +519,21 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
     
 }
 
+//回到前台通知
+- (void)becomActive:(NSNotification *)noti{
+    if (self.isPlaying==YES) {
+        [self.player play];
+        self.playOrPauseBtn.selected=NO;
+    }
+}
+
+//后台
+- (void)backToBackGround:(NSNotification *)noti{
+    if (self.isPlaying==YES) {
+        [self.player pause];
+    }
+}
+
 
 //单击
 - (void)handleSingleTap{
@@ -542,9 +576,12 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
                 [self setCurrentTime:0];
             }
             [self.player play];
+            self.isPlaying=YES;
         }else{
             //正在播放
             [self.player pause];
+            self.isPlaying=NO;
+            [self.indicatorView stopAnimating];
         }
     }];
 }
@@ -568,6 +605,10 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
     self.player=[AVPlayer playerWithPlayerItem:self.currentItem];
     //更换视频播放的视图
     [self.playerView setPlayerLayer:self.player];
+    //开始播放
+    [self.player play];
+    self.isPlaying=YES;
+    self.playOrPauseBtn.selected=NO;
     //停止底部操作栏5秒隐藏的定时器
     [self invalidTimer];
     //显示底部操作栏
@@ -607,6 +648,7 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
     [self.currentItem addObserver:self forKeyPath:@"playbackLikelyToKeepUp" options:NSKeyValueObservingOptionNew context:PlayViewStatusObservationContext];
     // 添加视频播放结束通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayDidEnd:) name:AVPlayerItemDidPlayToEndTimeNotification object:self.currentItem];
+    
 }
 
 
@@ -756,6 +798,8 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
 - (void)dealloc{
     
     [self removeCurrentItemObser];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     
     [self.autoDismissTimer invalidate];
     

@@ -7,17 +7,20 @@
 //
 
 #import "NetEaseViewController.h"
-#import "SidModel.h"
-#import "VideoModel.h"
-#import "VideoCell.h"
+#import "PlayerModel.h"
+#import "PlayerTableViewCell.h"
+#import "PlayerViewController.h"
+#define mainURL @"http://service.inke.com/api/live/aggregation?imsi=&uid=147970465&proto=6&idfa=3EDE83E7-9CD1-4186-9F37-EE77B7423265&lc=0000000000000027&cc=TG0001&imei=&sid=20tJHn0JsxdmOGkbNjpEjo3DIKFyoyboTrCjMvP7zNxofi1QNXT&cv=IK3.2.00_Iphone&devi=134a83cdf2e6701fa8f85c099c5e68ac3ea7bd4b&conn=Wifi&ua=iPhone%205s&idfv=5CCB6FE7-1F0F-4288-90DC-946D6F6C45C2&osversion=ios_9.300000&interest=1&location=0"
+#define Ratio 708/550
 
-@interface NetEaseViewController ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
+
+@interface NetEaseViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 
 @property (nonatomic,strong) NSMutableArray *dataSource;
 
-@property (nonatomic,strong) XWPlayer *xwPlayer;
+@property (nonatomic,strong) IJKFFMoviePlayerController *player;
 
 @property (nonatomic,strong) NSIndexPath *currentIndexPath;
 
@@ -29,13 +32,7 @@ static NSString *const indentifer=@"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title=@"网易视频";
-    //注册播放完成通知
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(videoDidFinished:) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
-    //注册全屏播放通知
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(fullScreenBtnClick:) name:@"fullScreenBtnClickNotice" object:nil];
-    //注册关闭视频通知
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(closeTheVideo:) name:@"closeTheVideo" object:nil];
+    self.navigationItem.title=@"映客直播";
     //添加下拉刷新
     [self addRefreshAndFootMore];
     [self.tableview.mj_header beginRefreshing];
@@ -45,7 +42,7 @@ static NSString *const indentifer=@"Cell";
 - (void)addRefreshAndFootMore{
     __unsafe_unretained UITableView *tableView=self.tableview;
     tableView.tableFooterView=[[UIView alloc]initWithFrame:CGRectZero];
-    [tableView registerNib:[UINib nibWithNibName:NSStringFromClass([VideoCell class]) bundle:nil] forCellReuseIdentifier:indentifer];
+    [tableView registerClass:[PlayerTableViewCell class] forCellReuseIdentifier:indentifer];
     __weak typeof(self) weakSelf=self;
     tableView.mj_header=[MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [weakSelf loadData];
@@ -57,25 +54,47 @@ static NSString *const indentifer=@"Cell";
 
 //下拉刷新
 - (void)loadData{
-    [[DataManager shareManager] getSIDArrayWithURLString:@"http://c.m.163.com/nc/video/home/0-10.html" success:^(NSArray *sidArray, NSArray *videoArray) {
-        [self.tableview.mj_header endRefreshing];
-        self.dataSource=[NSMutableArray arrayWithArray:videoArray];
+    [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:mainURL]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+        NSDictionary *jsonObject=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        NSArray *listArray = [jsonObject objectForKey:@"lives"];
+        for (NSDictionary *dic in listArray) {
+            MJWeakSelf
+            PlayerModel *playerModel = [[PlayerModel alloc] initWithDictionary:dic];
+            playerModel.city = dic[@"city"];
+            playerModel.portrait = dic[@"creator"][@"portrait"];
+            playerModel.name = dic[@"creator"][@"nick"];
+            playerModel.online_users = [dic[@"online_users"] intValue];
+            NSLog(@"playerModel.online_users = %d",playerModel.online_users);
+            playerModel.url = dic[@"stream_addr"];
+            [weakSelf.dataSource addObject:playerModel];
+        }
         [self.tableview reloadData];
-    } failed:^(NSError *error) {
-        NSLog(@"加载失败");
-    }];
+        [self.tableview.mj_header endRefreshing];
+
+    } ];
 }
 
 //上拉加载更多
 - (void)loadMoreData{
-    NSString *urlString=[NSString stringWithFormat:@"http://c.m.163.com/nc/video/home/%ld-10.html",self.dataSource.count];
-    [[DataManager shareManager] getSIDArrayWithURLString:urlString success:^(NSArray *sidArray, NSArray *videoArray) {
-        [self.tableview.mj_footer endRefreshing];
-        [self.dataSource addObjectsFromArray:videoArray];
+    [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:mainURL]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+        NSDictionary *jsonObject=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        NSArray *listArray = [jsonObject objectForKey:@"lives"];
+        for (NSDictionary *dic in listArray) {
+            MJWeakSelf
+            PlayerModel *playerModel = [[PlayerModel alloc] initWithDictionary:dic];
+            playerModel.city = dic[@"city"];
+            playerModel.portrait = dic[@"creator"][@"portrait"];
+            playerModel.name = dic[@"creator"][@"nick"];
+            playerModel.online_users = [dic[@"online_users"] intValue];
+            NSLog(@"playerModel.online_users = %d",playerModel.online_users);
+            playerModel.url = dic[@"stream_addr"];
+            [weakSelf.dataSource addObject:playerModel];
+        }
         [self.tableview reloadData];
-    } failed:^(NSError *error) {
-        NSLog(@"加载失败");
-    }];
+        [self.tableview.mj_header endRefreshing];
+        
+    } ];
+
 }
 
 
@@ -89,229 +108,26 @@ static NSString *const indentifer=@"Cell";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 314;
+    return [UIScreen mainScreen].bounds.size.width * Ratio + 1;;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    VideoCell *cell = [tableView dequeueReusableCellWithIdentifier:indentifer];
-    cell.model = [self.dataSource objectAtIndex:indexPath.row];
-    [cell.playBtn addTarget:self action:@selector(startPlayVideo:) forControlEvents:UIControlEventTouchUpInside];
-    cell.playBtn.tag = indexPath.row;
-#pragma mark 超出屏幕停止播放
-    if (_xwPlayer&&_xwPlayer.superview) {
-        if (indexPath==_currentIndexPath) {
-            [cell.playBtn.superview sendSubviewToBack:cell.playBtn];
-        }else{
-            [cell.playBtn.superview bringSubviewToFront:cell.playBtn];
-        }
-        NSArray *indexpaths = [tableView indexPathsForVisibleRows];
-        if (![indexpaths containsObject:_currentIndexPath]) {//复用
-            if ([[UIApplication sharedApplication].keyWindow.subviews containsObject:_xwPlayer]) {
-                _xwPlayer.hidden = NO;
-            }else{
-                _xwPlayer.hidden = YES;
-            }
-        }else{
-            if ([cell.backgroundIV.subviews containsObject:_xwPlayer]) {
-                [cell.backgroundIV addSubview:_xwPlayer];
-                [_xwPlayer.player play];
-                _xwPlayer.playOrPauseBtn.selected = NO;
-                _xwPlayer.hidden = NO;
-            }
-            
-        }
-    }
+    PlayerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:indentifer];
+    cell.playerModel = [self.dataSource objectAtIndex:indexPath.row];
     return cell;
 }
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    //    VideoModel *   model = [self.dataSource objectAtIndex:indexPath.row];
-    //    DetailViewController *detailVC = [[DetailViewController alloc]init];
-    //    detailVC.URLString  = model.m3u8_url;
-    //    detailVC.title = model.title;
-    //    [self.navigationController pushViewController:detailVC animated:YES];
+    PlayerViewController * playerVc = [[PlayerViewController alloc] init];
+    PlayerModel * PlayerModel = self.dataSource[indexPath.row];
+    playerVc.liveUrl = PlayerModel.url;
+    playerVc.imageUrl = PlayerModel.portrait;
+    playerVc.hidesBottomBarWhenPushed=YES;
+    [self.navigationController pushViewController:playerVc animated:true];
+    [self.navigationController setNavigationBarHidden:YES];
 }
-#pragma mark 视频播放操作
-//开始播放
-- (void)startPlayVideo:(UIButton *)btn{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.currentIndexPath=[NSIndexPath indexPathForRow:btn.tag inSection:0];
-        VideoModel *model=[self.dataSource objectAtIndex:btn.tag];
-        VideoCell  *currentCell=[self.tableview cellForRowAtIndexPath:self.currentIndexPath];
-        if (self.xwPlayer) {
-            [self.xwPlayer removeFromSuperview];
-            [self.xwPlayer setVideoURLStr:model.mp4_url];
-        }else{
-            XWPlayer *player=[[XWPlayer alloc]initWithFrame:currentCell.backgroundIV.bounds videoURLStr:model.mp4_url];
-            self.xwPlayer=player;
-        }
-        
-        self.xwPlayer.frame=currentCell.backgroundIV.bounds;
-//        self.xwPlayer.playerLayer.frame=self.xwPlayer.bounds;
-        [currentCell.backgroundIV addSubview:self.xwPlayer];
-        [currentCell.backgroundIV bringSubviewToFront:self.xwPlayer];
-        [currentCell.playBtn.superview sendSubviewToBack:currentCell.playBtn];
-        self.xwPlayer.playOrPauseBtn.selected=NO;
-        _xwPlayer.isFullscreen=NO;
-        self.xwPlayer.hidden=NO;
-        _xwPlayer.fullScreenBtn.selected=NO;
-        [self.tableview reloadData];
-        
-    });
-}
-
-
-#pragma mark scrollView delegate
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    //    if (scrollView==self.tableview) {
-    //        if (self.xwPlayer==nil) {
-    //            return;
-    //        }
-    //        //有打开的视频
-    //        if (self.xwPlayer.superview) {
-    //            //正在播放的cell在主屏幕的位置
-    //            CGRect rectInTableView=[self.tableview rectForRowAtIndexPath:self.currentIndexPath];
-    //            CGRect rectInSuperView=[self.tableview convertRect:rectInTableView toView:[self.tableview superview]];
-    //            if (rectInSuperView.origin.y<-(314-64-35)||rectInSuperView.origin.y>kScreenHeight-49-64) {
-    //                [self releaseXWPlayer];
-    //                VideoCell *currentCell=[self.tableview cellForRowAtIndexPath:self.currentIndexPath];
-    //                [currentCell.playBtn.superview bringSubviewToFront:currentCell.playBtn];
-    //            }
-    //        }
-    //    }
-}
-
-//在tableviewcell上面显示
-- (void)toCell{
-    VideoCell *currentCell=[self.tableview cellForRowAtIndexPath:self.currentIndexPath];
-    [_xwPlayer removeFromSuperview];
-    [UIView animateWithDuration:0.25 animations:^{
-        _xwPlayer.transform=CGAffineTransformIdentity;
-        _xwPlayer.frame=currentCell.backgroundIV.bounds;
-//        _xwPlayer.playerLayer.frame=_xwPlayer.bounds;
-        [currentCell.backgroundIV addSubview:_xwPlayer];
-        [currentCell.backgroundIV bringSubviewToFront:_xwPlayer];
-        [_xwPlayer.bottomView mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(_xwPlayer).with.offset(0);
-            make.right.equalTo(_xwPlayer).with.offset(0);
-            make.height.mas_equalTo(40);
-            make.bottom.equalTo(_xwPlayer).with.offset(0);
-        }];
-        [_xwPlayer.closeBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
-            
-            make.left.equalTo(_xwPlayer).with.offset(5);
-            make.height.mas_equalTo(30);
-            make.width.mas_equalTo(30);
-            make.top.equalTo(_xwPlayer).with.offset(5);
-            
-        }];
-    } completion:^(BOOL finished) {
-        _xwPlayer.isFullscreen=NO;
-        _xwPlayer.fullScreenBtn.selected=NO;
-    }];
-}
-
-
-//播放完成
-- (void)videoDidFinished:(NSNotification *)notice{
-    [self.xwPlayer.player pause];
-    VideoCell *currentCell=[self.tableview cellForRowAtIndexPath:self.currentIndexPath];
-    [currentCell.playBtn.superview bringSubviewToFront:currentCell.playBtn];
-    [self.xwPlayer removeFromSuperview];
-}
-
-//全屏播放
-- (void)fullScreenBtnClick:(NSNotification *)notice{
-    UIButton *fullScreenBtn=(UIButton *)[notice object];
-    if (fullScreenBtn.isSelected) {
-        [self toFullScreenWithInterfaceOrientation:UIInterfaceOrientationLandscapeLeft];
-    }else{
-        [self toCell];
-    }
-}
-
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(onDeviceOrientationChange:) name:UIDeviceOrientationDidChangeNotification object:nil];
-}
-
-//屏幕旋转通知
-- (void)onDeviceOrientationChange:(NSNotification *)noti{
-    if (_xwPlayer==nil||_xwPlayer.superview==nil) {
-        return;
-    };
-    UIDeviceOrientation orientation = [UIDevice currentDevice].orientation;
-    UIInterfaceOrientation interfaceOrientation = (UIInterfaceOrientation)orientation;
-    switch (interfaceOrientation) {
-        case UIInterfaceOrientationPortraitUpsideDown:{
-            NSLog(@"第3个旋转方向---电池栏在下");
-        }
-            break;
-        case UIInterfaceOrientationPortrait:{
-            NSLog(@"第0个旋转方向---电池栏在上");
-            if (_xwPlayer.isFullscreen) {
-                [self toCell];
-            }
-        }
-            break;
-        case UIInterfaceOrientationLandscapeLeft:{
-            NSLog(@"第2个旋转方向---电池栏在左");
-            if (_xwPlayer.fullScreenBtn.selected == NO) {
-                [self toFullScreenWithInterfaceOrientation:interfaceOrientation];
-            }
-        }
-            break;
-        case UIInterfaceOrientationLandscapeRight:{
-            NSLog(@"第1个旋转方向---电池栏在右");
-            if (_xwPlayer.fullScreenBtn.selected == NO) {
-                [self toFullScreenWithInterfaceOrientation:interfaceOrientation];
-            }
-        }
-            break;
-        default:
-            break;
-    }
-}
-
-- (void)toFullScreenWithInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
-    [_xwPlayer removeFromSuperview];
-    _xwPlayer.transform=CGAffineTransformIdentity;
-    if (interfaceOrientation==UIInterfaceOrientationLandscapeLeft) {
-        _xwPlayer.transform=CGAffineTransformMakeRotation(-M_PI_2);
-    }else if (interfaceOrientation==UIInterfaceOrientationLandscapeRight){
-        _xwPlayer.transform=CGAffineTransformMakeRotation(M_PI_2);
-    }
-    _xwPlayer.frame=CGRectMake(0, 0, kScreenWidth, kScreenHeight);
-//    _xwPlayer.playerLayer.frame=CGRectMake(0, 0, kScreenHeight, kScreenWidth);
-    [_xwPlayer.bottomView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(40);
-        make.top.mas_equalTo(self.view.frame.size.width-40);
-        make.width.mas_equalTo(self.view.frame.size.height);
-    }];
-    [_xwPlayer.closeBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(_xwPlayer).with.offset((-self.view.frame.size.height/2));
-        make.height.mas_equalTo(30);
-        make.width.mas_equalTo(30);
-        make.top.equalTo(_xwPlayer).with.offset(5);
-        
-    }];
-    
-    [[UIApplication sharedApplication].keyWindow addSubview:_xwPlayer];
-    _xwPlayer.isFullscreen=YES;
-    _xwPlayer.fullScreenBtn.selected=YES;
-    [_xwPlayer bringSubviewToFront:_xwPlayer.bottomView];
-    [_xwPlayer bringSubviewToFront:_xwPlayer.closeBtn];
-}
-
-//关闭视频播放
-- (void)closeTheVideo:(NSNotification *)notice{
-    VideoCell *currentCell=[self.tableview cellForRowAtIndexPath:self.currentIndexPath];
-    [currentCell.playBtn.superview bringSubviewToFront:currentCell.playBtn];
-    [self releaseXWPlayer];
-}
-
 
 
 #pragma mark 懒加载
@@ -321,35 +137,5 @@ static NSString *const indentifer=@"Cell";
     }
     return _dataSource;
 }
-
-- (void)viewDidDisappear:(BOOL)animated{
-    [super viewDidDisappear:animated];
-    VideoCell *currentCell=[self.tableview cellForRowAtIndexPath:self.currentIndexPath];
-    [currentCell.playBtn.superview bringSubviewToFront:currentCell.playBtn];
-    [self releaseXWPlayer];
-}
-
-
-- (void)dealloc{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [self releaseXWPlayer];
-}
-
-- (void)releaseXWPlayer{
-    [self.xwPlayer.player.currentItem cancelPendingSeeks];
-    [self.xwPlayer.player.currentItem.asset cancelLoading];
-    [self.xwPlayer.player pause];
-    [self.xwPlayer.player replaceCurrentItemWithPlayerItem:nil];
-    [self.xwPlayer removeFromSuperview];
-//    [self.xwPlayer.playerLayer removeFromSuperlayer];
-    self.xwPlayer=nil;
-    self.xwPlayer.player=nil;
-    self.xwPlayer.currentItem=nil;
-//    self.xwPlayer.playerLayer=nil;
-    self.xwPlayer.playOrPauseBtn=nil;
-    self.xwPlayer.bottomView=nil;
-    self.currentIndexPath=nil;
-}
-
 
 @end

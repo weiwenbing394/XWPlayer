@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "075AA4B5BF6C63828FCE06FFE69A35900748C3B8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "075AA4B5BF6C63828FCE06FFE69A35900748C3B8" : 9223372036854775807,
+    "AD5C40071A3D09ED3876DE6D4039984FF5B04354" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1D7957BC-B75C-4E0C-BD23-BCE52AB42259",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "075AA4B5BF6C63828FCE06FFE69A35900748C3B8" : "XWPlayer\/",
+    "AD5C40071A3D09ED3876DE6D4039984FF5B04354" : "XWPlayer\/XWPlayer\/ThirdLib\/ijkplayerLib\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "XWPlayer",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "XWPlayer.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/weiwenbing394\/XWPlayer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "075AA4B5BF6C63828FCE06FFE69A35900748C3B8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/iThinkerYZ\/ijkplayerLib.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AD5C40071A3D09ED3876DE6D4039984FF5B04354"
+    }
+  ]
+}

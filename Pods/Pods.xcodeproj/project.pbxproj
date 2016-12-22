@@ -1,0 +1,930 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000407B8476B6B21EF1EE0C9A37EAB9F /* LFLiveSession.h in Headers */ = {isa = PBXBuildFile; fileRef = F91A1992DEC9D406429EBCE96F685393 /* LFLiveSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		045FAE095984FED0E77C03EC95517612 /* LFGPUImageEmptyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B73E87DB163D39998C3CE250CF346C6 /* LFGPUImageEmptyFilter.m */; };
+		0867708BE49677AA236ED049D34945F0 /* LFLiveKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 11180C575BEEC90901942B76DAD281A7 /* LFLiveKit-dummy.m */; };
+		08B6CE05E9298ED5E9BFF2BE3D7548FD /* Pods-XWPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C991759EE7DA41E7CC54A19A8ED0CA0A /* Pods-XWPlayer-dummy.m */; };
+		0AD168CC4093117BA9614DCC1DB5E1A3 /* NSMutableArray+LFAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F0C17D6E4387145CABBB8B2F763B33F /* NSMutableArray+LFAdd.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0D90B244B50ED80F72BF604EDBEBE805 /* LFStreamRTMPSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F62C85C629FD87608C15FFA6233604 /* LFStreamRTMPSocket.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		18E6D8C8DAC7E94805E12D21FC12276D /* BarrageSpriteFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F28C1FF4AFC150F22F6EC80CA596099D /* BarrageSpriteFactory.m */; };
+		193821DA9521F81F6795A13A42872F87 /* BarrageWalkTextSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = AB0F5ED3824305CC639AB8591F317C83 /* BarrageWalkTextSprite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19986CEACF4B698AC23A1D9D71A6107E /* LFFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FBDFC05B2175B1716C9B83E01B8328 /* LFFrame.m */; };
+		19A6E376B1F236B8394E24022E55558F /* LFStreamingBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = F759A4BC7E32A074B32EEDFCDFF87376 /* LFStreamingBuffer.m */; };
+		19B73EB44D17AA79807DBB1D0428FA6B /* LFMP4Atom.m in Sources */ = {isa = PBXBuildFile; fileRef = B909E4AAEFB9910AF732AC76ECDA883C /* LFMP4Atom.m */; };
+		1A4F00F48ADA390F1D70FAF719F7427A /* BarrageSpriteUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D8E26C8747333039BD1427B20FBD42B /* BarrageSpriteUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D314779F988221DE06079498D58132A /* LFMP4Atom.h in Headers */ = {isa = PBXBuildFile; fileRef = E60E4DEA4D49F7552AF0BFB8DCB50343 /* LFMP4Atom.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1FD79FEA70827264BBD6C9FB0EA8E08C /* LFAudioFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 7884BE64BF99FA9A26D044B46C6995C9 /* LFAudioFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22084A679ED68C8401AA4558E281BB73 /* BarrageFloatImageSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = E089BF05B52293834B5AC352E22AF193 /* BarrageFloatImageSprite.m */; };
+		22D0621E079AEFFF9338ED62B72B0095 /* LFLiveAudioConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D61F8BE9ADAD887828F62BB3FD5A07 /* LFLiveAudioConfiguration.m */; };
+		24645E9BF7240E8AF31F6DC739B17483 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0FCFC908DB5CC99AEA8386E14954498 /* AVFoundation.framework */; };
+		287CA0CE2881CA2AF9124A7C440C09CE /* LFLiveStreamInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = F1357A164C3CA6358BFB7AB171565421 /* LFLiveStreamInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A4C9759470744A8EEAA99183DE3D009 /* LFVideoCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 2499BA530E27C2B4B9B32C2FFFEE0C38 /* LFVideoCapture.m */; };
+		32F3AB0FC2E89D5A476FB77F4EF0A356 /* LFHardwareVideoEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C9D6FDEB076094A7B7EB22C3AC73FB /* LFHardwareVideoEncoder.m */; };
+		346C413793BFEE8EA354BFC6F672A400 /* BarrageFloatSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C244EABFE142BCDA2245C05818D7472 /* BarrageFloatSprite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36EAF6DE0FA9ACD1B29D30F3E5BBB4FD /* BarrageRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = A1F249D41938FCE9A9ED8A52FB26852B /* BarrageRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38753C399DD188E26E81984E8631463F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8B7A463FDC44C3B71666B443F4C2A92 /* UIKit.framework */; };
+		392B6BEEC37498FC3555249CFA033C24 /* LFHardwareAudioEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = AA36DE848BEDDED77325CC8F794841CF /* LFHardwareAudioEncoder.m */; };
+		3937EB5A6E297B0138C488778B3D1913 /* LFH264VideoEncoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C84AD86749F242997104A69409F2B6B /* LFH264VideoEncoder.mm */; };
+		3A28BE420318FADF16D15FC155AE84DB /* BarrageWalkImageSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = 032E1A393DF3293F752ABA39BB363DA5 /* BarrageWalkImageSprite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A2946DE3616B7964C3D8BBFDC5662AA /* BarrageDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FDF9BD41EA4433F1DDF65CCCEC0A31 /* BarrageDispatcher.m */; };
+		3BA4BFA103954677E7AAAA68FA7126FD /* LFGPUImageBeautyFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 958ECD26283AA87052F92D969FB22056 /* LFGPUImageBeautyFilter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3F31F9485D677F29FCA495B136ABE182 /* BarrageSpriteFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 07AF66C494DD89FBB42EEEEADB57F90C /* BarrageSpriteFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4219DC8DAE1F5C4EC03F3FD73991082F /* LFAudioFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = D437362E892330814385215A74222C33 /* LFAudioFrame.m */; };
+		42AA02FDD0DC34A5692BF1F12D244F19 /* BarrageFloatTextSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DC1DBC6E2701025FF65500F7698033 /* BarrageFloatTextSprite.m */; };
+		446C3F052B28C1061F0FAFD69A08A33E /* LFVideoCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 31B57C24E5B50E2710FC7A08759B035C /* LFVideoCapture.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		491F0918AB2367B1DAE760339CAE492D /* LFStreamSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F1402C9ECA94D7BAB434A4A0398CAA4 /* LFStreamSocket.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4BFA415300DBAFF7A7DB8B6BA32934B7 /* LFHardwareAudioEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = C17087179D1D37DFD48AE93E0BD94881 /* LFHardwareAudioEncoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4D13E3999BA726705C4570D087A54A80 /* LFVideoEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AB472822103AFBDB91ED6DE3FB6DF3 /* LFVideoEncoder.m */; };
+		4F8626D04D18C67AFAE46A7A5B668487 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F860BFD6D1DCA1AAC85AF8690481338D /* Foundation.framework */; };
+		541881E3F4132E2B516B63679183E460 /* BarrageWalkSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = C8C5D402E1EE4BF8989FC83CB6A0B836 /* BarrageWalkSprite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54EFDC0C891C88593C9814857E58FCFA /* LFVideoFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EEF18C8D2B91DED69154343A9D6B3B7 /* LFVideoFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55E171A9BED541A1DE66BE8F03353944 /* LFLiveSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3713E9F2383DA38F6C4EEBD5BB19DE63 /* LFLiveSession.m */; };
+		57D2CABC1C7526858DC0C746A89202B7 /* LFHardwareVideoEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 86146237E8EF3EEE3140FE4B348C5D54 /* LFHardwareVideoEncoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		58EDC09B773117A7B43957CD7392EA2F /* BarrageRenderer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FF4C0F6AC110FFE8204075FE4DD0BB /* BarrageRenderer-dummy.m */; };
+		601EC998CC982FF2B7FD07068F8B1914 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F860BFD6D1DCA1AAC85AF8690481338D /* Foundation.framework */; };
+		601ED1B0885A327318ABF4F7A653D950 /* LFAVEncoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = AFEDA7E3B90DF7ABADC609A4EC1BC2BB /* LFAVEncoder.mm */; };
+		61892781F2E373152BB91B19758EC3D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F860BFD6D1DCA1AAC85AF8690481338D /* Foundation.framework */; };
+		62679F7D5031159AD21003E1100EE7C5 /* LFVideoEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = E974A33CA70CB44DF720274DDA44277D /* LFVideoEncoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6847235ABC62ED34B750C3B9223179E6 /* LFH264VideoEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F51A2C24695BC441ADECCE2DEA04A2 /* LFH264VideoEncoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6855A6C8650C91124070C2CC94F10F78 /* LFLiveVideoConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = E4A21B76E2F9D888F04B530E5A7B1A91 /* LFLiveVideoConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68D4A2F7052B64C833A1D2FCF8733C2B /* BarrageSpriteProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AC009B7F4061F2D81DB700F5160B76F /* BarrageSpriteProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6ADEE4AD19C40506A7B9E477B8758120 /* BarrageHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FA22F9E81A9FDC6BFE49D4E4EB995C6 /* BarrageHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B08F391A3AEDF1C30FC5A3254CF50DF /* BarrageDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EC076AD3DC0EFE440D0D2FEBDD71EC /* BarrageDescriptor.m */; };
+		6B0C4A0753754382B281252548113AEC /* BarrageDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = F64572E657123B14E3A8A08220F5A5BC /* BarrageDispatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71F101E60C83941FA5D6C96D53A8F61A /* LFLiveAudioConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = E7DD6E0D2516E5AE1AEB36F173241938 /* LFLiveAudioConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72BADA3BB30362CE9477B6B73C377E97 /* BarrageSpriteUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C3FAF6A4B73030D36A2CA222A6EEC3 /* BarrageSpriteUtility.m */; };
+		78F8538924EB0CEF6EC5A21390173BB7 /* BarrageWalkSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = EE67710C3FF4AA1C94609B0A8BB2065B /* BarrageWalkSprite.m */; };
+		7936E29A2F20852308240BDFF50F7904 /* LFAVEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BCDDFC84D7C3268DE8ECF49610F07B7 /* LFAVEncoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7BB35C3AEEBE2E0F031C5B4C909CE01E /* LFNALUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = 763405DB9AB5CC64A884DCB0080E449D /* LFNALUnit.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7F447513BDFBCA74673D7ACB9527202B /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88B8EEA7153F054D1492B12CD25C661 /* VideoToolbox.framework */; };
+		8DFCACFADDAAE6E296DF73BB497BE9A8 /* LFGPUImageBeautyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A7E1E592A627695F76AA5B1034A2F9 /* LFGPUImageBeautyFilter.m */; };
+		8E08369D117D46E2B3504FB531FB6C0D /* LFVideoEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = CB6571BF0D0B2EE10D4780046836DE67 /* LFVideoEncoding.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		936493DDFDE44FE9BBF81FF16A2DF343 /* LFStreamingBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 67DB01D44006F332C0D57591C61B476D /* LFStreamingBuffer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		958707E8D2DE807A0858176A384986C3 /* BarrageCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 251604916A0CB8F761F302588D92C9AA /* BarrageCanvas.m */; };
+		984CADDD67D7CC38BE0CD47EBBDBE583 /* BarrageClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B612538DF647EDCEC35217851D504D /* BarrageClock.m */; };
+		98FEA52F4EEB8B078C77D20DA361A75D /* LFLiveDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 386CC38B22D2416A08F554D4026B8FB5 /* LFLiveDebug.m */; };
+		9FB7B4E069DD558EBBE02B42392DA911 /* LFAudioCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = C21B4738BB1854BCDC79C6A08556ED49 /* LFAudioCapture.m */; };
+		A2C2CC8B7C55283E2437F4D10BB9B54C /* BarrageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD408900CBE5EEC14810465B65B4335 /* BarrageRenderer.m */; };
+		A3706DAF33412AFBC80CCF3ADEF7402E /* LFFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = FDA18D1621140DDF83DD92BACF2AF292 /* LFFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7D2BAC5BDE73271FCD3B4C75DDCA4AB /* LFLiveStreamInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7771B068420EDDAF707CCDE589D8DC9E /* LFLiveStreamInfo.m */; };
+		A9E0D1D8E3A6EB56CD3B4CFE0593469C /* BarrageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EF58FB37B564D878402C6151998687A /* BarrageLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD3F784181536C81EFFAB833E7F3EC07 /* BarrageClock.h in Headers */ = {isa = PBXBuildFile; fileRef = BC2F16824711A24F172DA77F90DF47BD /* BarrageClock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE5927EA79D91745CE00011CAF352CD0 /* LFNALUnit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4416D66103D7BE76196D16EB47EAC695 /* LFNALUnit.cpp */; };
+		AF5E458A61F18D9403A6ADED64B01D67 /* BarrageCanvas.h in Headers */ = {isa = PBXBuildFile; fileRef = F2FF44B9B2953024967BB63840E000A5 /* BarrageCanvas.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B71C164F1C05B9F3A1427BB5E39C9FA4 /* BarrageSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = C23DA8E063AAAD9A5BB72C3E566D6426 /* BarrageSprite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7FBD1B2E9117B19B9FA47AE2148975C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7643E2F08ACB41B78357A2DD9B2575E /* AudioToolbox.framework */; };
+		B87836FEB64A0A55B0B0A5CA1541B7E6 /* LFAudioEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CED109D203B851B865A877E825E85FC /* LFAudioEncoding.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B8A83245436599BC1DFEAFA86D55E6F1 /* LFLiveVideoConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D02B3D7C9E729FAA4FD02966551D02 /* LFLiveVideoConfiguration.m */; };
+		B901F72289C0D7D5509D423F2B2E627E /* LFLiveKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E51F42989B6E4BBEBA4D58DD0FB6FAD /* LFLiveKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF7286E696578C4B2769B08CE1E1DF98 /* BarrageFloatImageSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = 27BE9F2A60179DBB5B5A480B1E60DD50 /* BarrageFloatImageSprite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C071B10EBFCAF9951CC5C1B22C927323 /* NSMutableArray+LFAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = A8581058BC4F6B4F87A5216196676C4F /* NSMutableArray+LFAdd.m */; };
+		C18489C26594438B38B21AD9D61C43A2 /* BarrageFloatTextSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = 82477FBDC6A921048414A4E1A1414EC5 /* BarrageFloatTextSprite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5BEC065EF5A1304168CDB7964E7895D /* LFStreamRtmpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = B520144596210AF9521D1B66846AEF29 /* LFStreamRtmpSocket.m */; };
+		D2AEDB9EDDF3C38EE3B58B388C2BA7F8 /* LFVideoFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D462D03890222455CC11CD40D19EDA /* LFVideoFrame.m */; };
+		D71C46FB998EFA97992AFA4FCE09AA43 /* LFLiveDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ACF2C3CD017BF46FE261E976849183D /* LFLiveDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D782845F150BC6875EB3EC43077DFDEA /* BarrageFloatSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA86EEC2C70E50873F5DC2A26CAB15C /* BarrageFloatSprite.m */; };
+		DED587CED8F88DEF639DA241553F7A1E /* BarrageWalkTextSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD49471D737E48CB4720E05034B9234 /* BarrageWalkTextSprite.m */; };
+		E098A0AA84AF64853AE43D83C149AED0 /* BarrageWalkImageSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BADA40BFBCABE330D300F2F80733F5A /* BarrageWalkImageSprite.m */; };
+		E4D87EA1531D01735603434360A81264 /* BarrageSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C0676C676857C0932F7D0D4251A22 /* BarrageSprite.m */; };
+		E8AB17D04C7ACCF19D9A7E36082C6855 /* LFGPUImageEmptyFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F53B86BD0DCEF0DD20A10AACA12D68C /* LFGPUImageEmptyFilter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EF65749E60F88FE6BD37DBAF97E9401F /* BarrageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E08312FA96EDD130CD44DB989936AAE /* BarrageLoader.m */; };
+		F12AD874C9A9A8ED40154AC8A08FD186 /* LFAudioCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = B9D6306B276AFC5FEE20F8D651BB98FA /* LFAudioCapture.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F91D718E8F10CDACBEF82760FD9C6A1F /* BarrageDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 908E23860271B855E41E24D2DEA0206B /* BarrageDescriptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7D71A2CC436AC9439E801B35AC75C00D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BED8A336C8A285C057115BB2145DAB46;
+			remoteInfo = BarrageRenderer;
+		};
+		C8E2000720E5EA0194BADDD851CF7522 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 591DED6C4E2128C5D9D41BCB293AC26F;
+			remoteInfo = LFLiveKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00F51A2C24695BC441ADECCE2DEA04A2 /* LFH264VideoEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFH264VideoEncoder.h; path = LFLiveKit/coder/LFH264VideoEncoder.h; sourceTree = "<group>"; };
+		032E1A393DF3293F752ABA39BB363DA5 /* BarrageWalkImageSprite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BarrageWalkImageSprite.h; path = BarrageRenderer/BarrageSprite/BarrageWalkImageSprite.h; sourceTree = "<group>"; };
+		07AF66C494DD89FBB42EEEEADB57F90C /* BarrageSpriteFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BarrageSpriteFactory.h; path = BarrageRenderer/BarrageEngine/BarrageSpriteFactory.h; sourceTree = "<group>"; };
+		0B73E87DB163D39998C3CE250CF346C6 /* LFGPUImageEmptyFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFGPUImageEmptyFilter.m; path = LFLiveKit/filter/LFGPUImageEmptyFilter.m; sourceTree = "<group>"; };
+		0E08312FA96EDD130CD44DB989936AAE /* BarrageLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BarrageLoader.m; path = BarrageRenderer/BarrageLoader/BarrageLoader.m; sourceTree = "<group>"; };
+		11180C575BEEC90901942B76DAD281A7 /* LFLiveKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LFLiveKit-dummy.m"; sourceTree = "<group>"; };
+		1AC009B7F4061F2D81DB700F5160B76F /* BarrageSpriteProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BarrageSpriteProtocol.h; path = BarrageRenderer/BarrageSprite/BarrageSpriteProtocol.h; sourceTree = "<group>"; };
+		1C7C0676C676857C0932F7D0D4251A22 /* BarrageSprite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BarrageSprite.m; path = BarrageRenderer/BarrageSprite/BarrageSprite.m; sourceTree = "<group>"; };
+		1E51F42989B6E4BBEBA4D58DD0FB6FAD /* LFLiveKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFLiveKit.h; path = LFLiveKit/LFLiveKit.h; sourceTree = "<group>"; };
+		1EF58FB37B564D878402C6151998687A /* BarrageLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BarrageLoader.h; path = BarrageRenderer/BarrageLoader/BarrageLoader.h; sourceTree = "<group>"; };
+		2499BA530E27C2B4B9B32C2FFFEE0C38 /* LFVideoCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFVideoCapture.m; path = LFLiveKit/capture/LFVideoCapture.m; sourceTree = "<group>"; };
+		251604916A0CB8F761F302588D92C9AA /* BarrageCanvas.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BarrageCanvas.m; path = BarrageRenderer/BarrageEngine/BarrageCanvas.m; sourceTree = "<group>"; };
+		26CDB8BD57135708D6A7CE8748B8C41A /* Pods-XWPlayer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XWPlayer-acknowledgements.markdown"; sourceTree = "<group>"; };
+		27BE9F2A60179DBB5B5A480B1E60DD50 /* BarrageFloatImageSprite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BarrageFloatImageSprite.h; path = BarrageRenderer/BarrageSprite/BarrageFloatImageSprite.h; sourceTree = "<group>"; };
+		2BCDDFC84D7C3268DE8ECF49610F07B7 /* LFAVEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFAVEncoder.h; path = LFLiveKit/coder/H264/LFAVEncoder.h; sourceTree = "<group>"; };
+		2C244EABFE142BCDA2245C05818D7472 /* BarrageFloatSprite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BarrageFloatSprite.h; path = BarrageRenderer/BarrageSprite/BarrageFloatSprite.h; sourceTree = "<group>"; };
+		2C84AD86749F242997104A69409F2B6B /* LFH264VideoEncoder.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = LFH264VideoEncoder.mm; path = LFLiveKit/coder/LFH264VideoEncoder.mm; sourceTree = "<group>"; };
+		302416056C4168D0C18BC3536078CC7E /* BarrageRenderer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BarrageRenderer.xcconfig; sourceTree = "<group>"; };
+		31B57C24E5B50E2710FC7A08759B035C /* LFVideoCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFVideoCapture.h; path = LFLiveKit/capture/LFVideoCapture.h; sourceTree = "<group>"; };
+		3713E9F2383DA38F6C4EEBD5BB19DE63 /* LFLiveSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFLiveSession.m; path = LFLiveKit/LFLiveSession.m; sourceTree = "<group>"; };
+		37B612538DF647EDCEC35217851D504D /* BarrageClock.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BarrageClock.m; path = BarrageRenderer/BarrageEngine/BarrageClock.m; sourceTree = "<group>"; };
+		386CC38B22D2416A08F554D4026B8FB5 /* LFLiveDebug.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFLiveDebug.m; path = LFLiveKit/objects/LFLiveDebug.m; sourceTree = "<group>"; };
+		38AB472822103AFBDB91ED6DE3FB6DF3 /* LFVideoEncoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFVideoEncoder.m; path = LFLiveKit/coder/H264/LFVideoEncoder.m; sourceTree = "<group>"; };
+		38EC076AD3DC0EFE440D0D2FEBDD71EC /* BarrageDescriptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BarrageDescriptor.m; path = BarrageRenderer/BarrageEngine/BarrageDescriptor.m; sourceTree = "<group>"; };
+		3EA86EEC2C70E50873F5DC2A26CAB15C /* BarrageFloatSprite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BarrageFloatSprite.m; path = BarrageRenderer/BarrageSprite/BarrageFloatSprite.m; sourceTree = "<group>"; };
+		3F0C17D6E4387145CABBB8B2F763B33F /* NSMutableArray+LFAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+LFAdd.h"; path = "LFLiveKit/publish/NSMutableArray+LFAdd.h"; sourceTree = "<group>"; };
+		41196C0D304184B47CF6D63BEC64EE5C /* libPods-XWPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XWPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4416D66103D7BE76196D16EB47EAC695 /* LFNALUnit.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = LFNALUnit.cpp; path = LFLiveKit/coder/H264/LFNALUnit.cpp; sourceTree = "<group>"; };
+		49FDF9BD41EA4433F1DDF65CCCEC0A31 /* BarrageDispatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BarrageDispatcher.m; path = BarrageRenderer/BarrageEngine/BarrageDispatcher.m; sourceTree = "<group>"; };
+		4BADA40BFBCABE330D300F2F80733F5A /* BarrageWalkImageSprite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BarrageWalkImageSprite.m; path = BarrageRenderer/BarrageSprite/BarrageWalkImageSprite.m; sourceTree = "<group>"; };
+		4BD408900CBE5EEC14810465B65B4335 /* BarrageRenderer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BarrageRenderer.m; path = BarrageRenderer/BarrageEngine/BarrageRenderer.m; sourceTree = "<group>"; };
+		51C3FAF6A4B73030D36A2CA222A6EEC3 /* BarrageSpriteUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BarrageSpriteUtility.m; path = BarrageRenderer/BarrageSprite/BarrageSpriteUtility.m; sourceTree = "<group>"; };
+		59DC1DBC6E2701025FF65500F7698033 /* BarrageFloatTextSprite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BarrageFloatTextSprite.m; path = BarrageRenderer/BarrageSprite/BarrageFloatTextSprite.m; sourceTree = "<group>"; };
+		5EEF18C8D2B91DED69154343A9D6B3B7 /* LFVideoFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFVideoFrame.h; path = LFLiveKit/objects/LFVideoFrame.h; sourceTree = "<group>"; };
+		5F53B86BD0DCEF0DD20A10AACA12D68C /* LFGPUImageEmptyFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFGPUImageEmptyFilter.h; path = LFLiveKit/filter/LFGPUImageEmptyFilter.h; sourceTree = "<group>"; };
+		62C9D6FDEB076094A7B7EB22C3AC73FB /* LFHardwareVideoEncoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFHardwareVideoEncoder.m; path = LFLiveKit/coder/LFHardwareVideoEncoder.m; sourceTree = "<group>"; };
+		6338CB4799E3D4A82C8EDEA0D45E06FB /* Pods-XWPlayer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XWPlayer-acknowledgements.plist"; sourceTree = "<group>"; };
+		66FF4C0F6AC110FFE8204075FE4DD0BB /* BarrageRenderer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BarrageRenderer-dummy.m"; sourceTree = "<group>"; };
+		67DB01D44006F332C0D57591C61B476D /* LFStreamingBuffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFStreamingBuffer.h; path = LFLiveKit/publish/LFStreamingBuffer.h; sourceTree = "<group>"; };
+		69BB3A4B2FC8CD36746C8A65D22497D5 /* Pods-XWPlayer-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XWPlayer-resources.sh"; sourceTree = "<group>"; };
+		6ACF2C3CD017BF46FE261E976849183D /* LFLiveDebug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFLiveDebug.h; path = LFLiveKit/objects/LFLiveDebug.h; sourceTree = "<group>"; };
+		6D8E26C8747333039BD1427B20FBD42B /* BarrageSpriteUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BarrageSpriteUtility.h; path = BarrageRenderer/BarrageSprite/BarrageSpriteUtility.h; sourceTree = "<group>"; };
+		763405DB9AB5CC64A884DCB0080E449D /* LFNALUnit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFNALUnit.h; path = LFLiveKit/coder/H264/LFNALUnit.h; sourceTree = "<group>"; };
+		7771B068420EDDAF707CCDE589D8DC9E /* LFLiveStreamInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFLiveStreamInfo.m; path = LFLiveKit/objects/LFLiveStreamInfo.m; sourceTree = "<group>"; };
+		7810B0E5E08D8828B968B19060D161E5 /* libBarrageRenderer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBarrageRenderer.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7884BE64BF99FA9A26D044B46C6995C9 /* LFAudioFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFAudioFrame.h; path = LFLiveKit/objects/LFAudioFrame.h; sourceTree = "<group>"; };
+		7F1402C9ECA94D7BAB434A4A0398CAA4 /* LFStreamSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFStreamSocket.h; path = LFLiveKit/publish/LFStreamSocket.h; sourceTree = "<group>"; };
+		800DDDE632B6CB07CADB6DE5A829F163 /* LFLiveKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LFLiveKit.xcconfig; sourceTree = "<group>"; };
+		814D7DDED31195A1FC4B6DE003737639 /* Pods-XWPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XWPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		82477FBDC6A921048414A4E1A1414EC5 /* BarrageFloatTextSprite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BarrageFloatTextSprite.h; path = BarrageRenderer/BarrageSprite/BarrageFloatTextSprite.h; sourceTree = "<group>"; };
+		82FBDFC05B2175B1716C9B83E01B8328 /* LFFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFFrame.m; path = LFLiveKit/objects/LFFrame.m; sourceTree = "<group>"; };
+		84D02B3D7C9E729FAA4FD02966551D02 /* LFLiveVideoConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFLiveVideoConfiguration.m; path = LFLiveKit/configuration/LFLiveVideoConfiguration.m; sourceTree = "<group>"; };
+		84D462D03890222455CC11CD40D19EDA /* LFVideoFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFVideoFrame.m; path = LFLiveKit/objects/LFVideoFrame.m; sourceTree = "<group>"; };
+		86146237E8EF3EEE3140FE4B348C5D54 /* LFHardwareVideoEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFHardwareVideoEncoder.h; path = LFLiveKit/coder/LFHardwareVideoEncoder.h; sourceTree = "<group>"; };
+		8CED109D203B851B865A877E825E85FC /* LFAudioEncoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFAudioEncoding.h; path = LFLiveKit/coder/LFAudioEncoding.h; sourceTree = "<group>"; };
+		8DF604C28E87DF6F304EC96B5760156E /* Pods-XWPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XWPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		8FA22F9E81A9FDC6BFE49D4E4EB995C6 /* BarrageHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BarrageHeader.h; path = BarrageRenderer/BarrageHeader.h; sourceTree = "<group>"; };
+		908E23860271B855E41E24D2DEA0206B /* BarrageDescriptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BarrageDescriptor.h; path = BarrageRenderer/BarrageEngine/BarrageDescriptor.h; sourceTree = "<group>"; };
+		92CF71685F7F1E5E2F0B4D4BD252A741 /* LFLiveKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LFLiveKit-prefix.pch"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		958ECD26283AA87052F92D969FB22056 /* LFGPUImageBeautyFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFGPUImageBeautyFilter.h; path = LFLiveKit/filter/LFGPUImageBeautyFilter.h; sourceTree = "<group>"; };
+		A1F249D41938FCE9A9ED8A52FB26852B /* BarrageRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BarrageRenderer.h; path = BarrageRenderer/BarrageEngine/BarrageRenderer.h; sourceTree = "<group>"; };
+		A8581058BC4F6B4F87A5216196676C4F /* NSMutableArray+LFAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+LFAdd.m"; path = "LFLiveKit/publish/NSMutableArray+LFAdd.m"; sourceTree = "<group>"; };
+		AA36DE848BEDDED77325CC8F794841CF /* LFHardwareAudioEncoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFHardwareAudioEncoder.m; path = LFLiveKit/coder/LFHardwareAudioEncoder.m; sourceTree = "<group>"; };
+		AB0F5ED3824305CC639AB8591F317C83 /* BarrageWalkTextSprite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BarrageWalkTextSprite.h; path = BarrageRenderer/BarrageSprite/BarrageWalkTextSprite.h; sourceTree = "<group>"; };
+		AFD49471D737E48CB4720E05034B9234 /* BarrageWalkTextSprite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BarrageWalkTextSprite.m; path = BarrageRenderer/BarrageSprite/BarrageWalkTextSprite.m; sourceTree = "<group>"; };
+		AFEDA7E3B90DF7ABADC609A4EC1BC2BB /* LFAVEncoder.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = LFAVEncoder.mm; path = LFLiveKit/coder/H264/LFAVEncoder.mm; sourceTree = "<group>"; };
+		B05270F715B86460A40BDACE208EDA28 /* BarrageRenderer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BarrageRenderer-prefix.pch"; sourceTree = "<group>"; };
+		B520144596210AF9521D1B66846AEF29 /* LFStreamRtmpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFStreamRtmpSocket.m; path = LFLiveKit/publish/LFStreamRtmpSocket.m; sourceTree = "<group>"; };
+		B909E4AAEFB9910AF732AC76ECDA883C /* LFMP4Atom.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFMP4Atom.m; path = LFLiveKit/coder/H264/LFMP4Atom.m; sourceTree = "<group>"; };
+		B9D6306B276AFC5FEE20F8D651BB98FA /* LFAudioCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFAudioCapture.h; path = LFLiveKit/capture/LFAudioCapture.h; sourceTree = "<group>"; };
+		BC1BCDB9B033F4D69828FC3F8D91D05A /* pili-librtmp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "pili-librtmp.framework"; path = "Vendor/pili-librtmp.framework"; sourceTree = "<group>"; };
+		BC2F16824711A24F172DA77F90DF47BD /* BarrageClock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BarrageClock.h; path = BarrageRenderer/BarrageEngine/BarrageClock.h; sourceTree = "<group>"; };
+		C0FCFC908DB5CC99AEA8386E14954498 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		C17087179D1D37DFD48AE93E0BD94881 /* LFHardwareAudioEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFHardwareAudioEncoder.h; path = LFLiveKit/coder/LFHardwareAudioEncoder.h; sourceTree = "<group>"; };
+		C21B4738BB1854BCDC79C6A08556ED49 /* LFAudioCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFAudioCapture.m; path = LFLiveKit/capture/LFAudioCapture.m; sourceTree = "<group>"; };
+		C23DA8E063AAAD9A5BB72C3E566D6426 /* BarrageSprite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BarrageSprite.h; path = BarrageRenderer/BarrageSprite/BarrageSprite.h; sourceTree = "<group>"; };
+		C88B8EEA7153F054D1492B12CD25C661 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/VideoToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		C8C0F0ECA284E1059732BFD180BB251A /* GPUImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GPUImage.framework; path = Vendor/GPUImage.framework; sourceTree = "<group>"; };
+		C8C5D402E1EE4BF8989FC83CB6A0B836 /* BarrageWalkSprite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BarrageWalkSprite.h; path = BarrageRenderer/BarrageSprite/BarrageWalkSprite.h; sourceTree = "<group>"; };
+		C991759EE7DA41E7CC54A19A8ED0CA0A /* Pods-XWPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XWPlayer-dummy.m"; sourceTree = "<group>"; };
+		CB6571BF0D0B2EE10D4780046836DE67 /* LFVideoEncoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFVideoEncoding.h; path = LFLiveKit/coder/LFVideoEncoding.h; sourceTree = "<group>"; };
+		D0A7E1E592A627695F76AA5B1034A2F9 /* LFGPUImageBeautyFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFGPUImageBeautyFilter.m; path = LFLiveKit/filter/LFGPUImageBeautyFilter.m; sourceTree = "<group>"; };
+		D437362E892330814385215A74222C33 /* LFAudioFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFAudioFrame.m; path = LFLiveKit/objects/LFAudioFrame.m; sourceTree = "<group>"; };
+		D4D61F8BE9ADAD887828F62BB3FD5A07 /* LFLiveAudioConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFLiveAudioConfiguration.m; path = LFLiveKit/configuration/LFLiveAudioConfiguration.m; sourceTree = "<group>"; };
+		D7643E2F08ACB41B78357A2DD9B2575E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		DFF65D26A79E2530F581FA4A90CD0612 /* Pods-XWPlayer-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XWPlayer-frameworks.sh"; sourceTree = "<group>"; };
+		E089BF05B52293834B5AC352E22AF193 /* BarrageFloatImageSprite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BarrageFloatImageSprite.m; path = BarrageRenderer/BarrageSprite/BarrageFloatImageSprite.m; sourceTree = "<group>"; };
+		E4A21B76E2F9D888F04B530E5A7B1A91 /* LFLiveVideoConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFLiveVideoConfiguration.h; path = LFLiveKit/configuration/LFLiveVideoConfiguration.h; sourceTree = "<group>"; };
+		E60E4DEA4D49F7552AF0BFB8DCB50343 /* LFMP4Atom.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFMP4Atom.h; path = LFLiveKit/coder/H264/LFMP4Atom.h; sourceTree = "<group>"; };
+		E6F62C85C629FD87608C15FFA6233604 /* LFStreamRTMPSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFStreamRTMPSocket.h; path = LFLiveKit/publish/LFStreamRTMPSocket.h; sourceTree = "<group>"; };
+		E7DD6E0D2516E5AE1AEB36F173241938 /* LFLiveAudioConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFLiveAudioConfiguration.h; path = LFLiveKit/configuration/LFLiveAudioConfiguration.h; sourceTree = "<group>"; };
+		E8B7A463FDC44C3B71666B443F4C2A92 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		E974A33CA70CB44DF720274DDA44277D /* LFVideoEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFVideoEncoder.h; path = LFLiveKit/coder/H264/LFVideoEncoder.h; sourceTree = "<group>"; };
+		ED10162C90C311542C3161A5701644B5 /* libLFLiveKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLFLiveKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE67710C3FF4AA1C94609B0A8BB2065B /* BarrageWalkSprite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BarrageWalkSprite.m; path = BarrageRenderer/BarrageSprite/BarrageWalkSprite.m; sourceTree = "<group>"; };
+		F1357A164C3CA6358BFB7AB171565421 /* LFLiveStreamInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFLiveStreamInfo.h; path = LFLiveKit/objects/LFLiveStreamInfo.h; sourceTree = "<group>"; };
+		F28C1FF4AFC150F22F6EC80CA596099D /* BarrageSpriteFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BarrageSpriteFactory.m; path = BarrageRenderer/BarrageEngine/BarrageSpriteFactory.m; sourceTree = "<group>"; };
+		F2FF44B9B2953024967BB63840E000A5 /* BarrageCanvas.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BarrageCanvas.h; path = BarrageRenderer/BarrageEngine/BarrageCanvas.h; sourceTree = "<group>"; };
+		F64572E657123B14E3A8A08220F5A5BC /* BarrageDispatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BarrageDispatcher.h; path = BarrageRenderer/BarrageEngine/BarrageDispatcher.h; sourceTree = "<group>"; };
+		F759A4BC7E32A074B32EEDFCDFF87376 /* LFStreamingBuffer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFStreamingBuffer.m; path = LFLiveKit/publish/LFStreamingBuffer.m; sourceTree = "<group>"; };
+		F860BFD6D1DCA1AAC85AF8690481338D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F91A1992DEC9D406429EBCE96F685393 /* LFLiveSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFLiveSession.h; path = LFLiveKit/LFLiveSession.h; sourceTree = "<group>"; };
+		FDA18D1621140DDF83DD92BACF2AF292 /* LFFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFFrame.h; path = LFLiveKit/objects/LFFrame.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6E331683916FC14FB3AF966B20728657 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61892781F2E373152BB91B19758EC3D8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9DC320E8D3F3A4F56ADCD2CB2A2F6B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7FBD1B2E9117B19B9FA47AE2148975C /* AudioToolbox.framework in Frameworks */,
+				24645E9BF7240E8AF31F6DC739B17483 /* AVFoundation.framework in Frameworks */,
+				4F8626D04D18C67AFAE46A7A5B668487 /* Foundation.framework in Frameworks */,
+				38753C399DD188E26E81984E8631463F /* UIKit.framework in Frameworks */,
+				7F447513BDFBCA74673D7ACB9527202B /* VideoToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEE6DB618A6D3BAD9CF0760FA69AEC95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				601EC998CC982FF2B7FD07068F8B1914 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00477D1290A031E0C15AF020E42B4DFB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0341D40991EED30811F8F874DFCB01DF /* Pods-XWPlayer */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		0341D40991EED30811F8F874DFCB01DF /* Pods-XWPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				26CDB8BD57135708D6A7CE8748B8C41A /* Pods-XWPlayer-acknowledgements.markdown */,
+				6338CB4799E3D4A82C8EDEA0D45E06FB /* Pods-XWPlayer-acknowledgements.plist */,
+				C991759EE7DA41E7CC54A19A8ED0CA0A /* Pods-XWPlayer-dummy.m */,
+				DFF65D26A79E2530F581FA4A90CD0612 /* Pods-XWPlayer-frameworks.sh */,
+				69BB3A4B2FC8CD36746C8A65D22497D5 /* Pods-XWPlayer-resources.sh */,
+				8DF604C28E87DF6F304EC96B5760156E /* Pods-XWPlayer.debug.xcconfig */,
+				814D7DDED31195A1FC4B6DE003737639 /* Pods-XWPlayer.release.xcconfig */,
+			);
+			name = "Pods-XWPlayer";
+			path = "Target Support Files/Pods-XWPlayer";
+			sourceTree = "<group>";
+		};
+		20B56609144CE204DFA8221F742B2D76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D887B62A471604CD6CEBC3DE17D3517 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		23C72E905997F977CE579C74F11DE62F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7810B0E5E08D8828B968B19060D161E5 /* libBarrageRenderer.a */,
+				ED10162C90C311542C3161A5701644B5 /* libLFLiveKit.a */,
+				41196C0D304184B47CF6D63BEC64EE5C /* libPods-XWPlayer.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		327A6C755BC0A24BD8F7EA0A34023BC3 /* BarrageRenderer */ = {
+			isa = PBXGroup;
+			children = (
+				F2FF44B9B2953024967BB63840E000A5 /* BarrageCanvas.h */,
+				251604916A0CB8F761F302588D92C9AA /* BarrageCanvas.m */,
+				BC2F16824711A24F172DA77F90DF47BD /* BarrageClock.h */,
+				37B612538DF647EDCEC35217851D504D /* BarrageClock.m */,
+				908E23860271B855E41E24D2DEA0206B /* BarrageDescriptor.h */,
+				38EC076AD3DC0EFE440D0D2FEBDD71EC /* BarrageDescriptor.m */,
+				F64572E657123B14E3A8A08220F5A5BC /* BarrageDispatcher.h */,
+				49FDF9BD41EA4433F1DDF65CCCEC0A31 /* BarrageDispatcher.m */,
+				27BE9F2A60179DBB5B5A480B1E60DD50 /* BarrageFloatImageSprite.h */,
+				E089BF05B52293834B5AC352E22AF193 /* BarrageFloatImageSprite.m */,
+				2C244EABFE142BCDA2245C05818D7472 /* BarrageFloatSprite.h */,
+				3EA86EEC2C70E50873F5DC2A26CAB15C /* BarrageFloatSprite.m */,
+				82477FBDC6A921048414A4E1A1414EC5 /* BarrageFloatTextSprite.h */,
+				59DC1DBC6E2701025FF65500F7698033 /* BarrageFloatTextSprite.m */,
+				8FA22F9E81A9FDC6BFE49D4E4EB995C6 /* BarrageHeader.h */,
+				1EF58FB37B564D878402C6151998687A /* BarrageLoader.h */,
+				0E08312FA96EDD130CD44DB989936AAE /* BarrageLoader.m */,
+				A1F249D41938FCE9A9ED8A52FB26852B /* BarrageRenderer.h */,
+				4BD408900CBE5EEC14810465B65B4335 /* BarrageRenderer.m */,
+				C23DA8E063AAAD9A5BB72C3E566D6426 /* BarrageSprite.h */,
+				1C7C0676C676857C0932F7D0D4251A22 /* BarrageSprite.m */,
+				07AF66C494DD89FBB42EEEEADB57F90C /* BarrageSpriteFactory.h */,
+				F28C1FF4AFC150F22F6EC80CA596099D /* BarrageSpriteFactory.m */,
+				1AC009B7F4061F2D81DB700F5160B76F /* BarrageSpriteProtocol.h */,
+				6D8E26C8747333039BD1427B20FBD42B /* BarrageSpriteUtility.h */,
+				51C3FAF6A4B73030D36A2CA222A6EEC3 /* BarrageSpriteUtility.m */,
+				032E1A393DF3293F752ABA39BB363DA5 /* BarrageWalkImageSprite.h */,
+				4BADA40BFBCABE330D300F2F80733F5A /* BarrageWalkImageSprite.m */,
+				C8C5D402E1EE4BF8989FC83CB6A0B836 /* BarrageWalkSprite.h */,
+				EE67710C3FF4AA1C94609B0A8BB2065B /* BarrageWalkSprite.m */,
+				AB0F5ED3824305CC639AB8591F317C83 /* BarrageWalkTextSprite.h */,
+				AFD49471D737E48CB4720E05034B9234 /* BarrageWalkTextSprite.m */,
+				ADE8A5EC797D1B1C585002DAE9CEFC16 /* Support Files */,
+			);
+			path = BarrageRenderer;
+			sourceTree = "<group>";
+		};
+		34BEDEFD84ABC2E117BA8A3E9E6D8C3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8C0F0ECA284E1059732BFD180BB251A /* GPUImage.framework */,
+				BC1BCDB9B033F4D69828FC3F8D91D05A /* pili-librtmp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D887B62A471604CD6CEBC3DE17D3517 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D7643E2F08ACB41B78357A2DD9B2575E /* AudioToolbox.framework */,
+				C0FCFC908DB5CC99AEA8386E14954498 /* AVFoundation.framework */,
+				F860BFD6D1DCA1AAC85AF8690481338D /* Foundation.framework */,
+				E8B7A463FDC44C3B71666B443F4C2A92 /* UIKit.framework */,
+				C88B8EEA7153F054D1492B12CD25C661 /* VideoToolbox.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
+				9E570B4E7BC7DCA8F09F94ABBBD58387 /* Pods */,
+				23C72E905997F977CE579C74F11DE62F /* Products */,
+				00477D1290A031E0C15AF020E42B4DFB /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9E570B4E7BC7DCA8F09F94ABBBD58387 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				327A6C755BC0A24BD8F7EA0A34023BC3 /* BarrageRenderer */,
+				AACBE0F9128C55F05ADAB84A4F561225 /* LFLiveKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AACBE0F9128C55F05ADAB84A4F561225 /* LFLiveKit */ = {
+			isa = PBXGroup;
+			children = (
+				B9D6306B276AFC5FEE20F8D651BB98FA /* LFAudioCapture.h */,
+				C21B4738BB1854BCDC79C6A08556ED49 /* LFAudioCapture.m */,
+				8CED109D203B851B865A877E825E85FC /* LFAudioEncoding.h */,
+				7884BE64BF99FA9A26D044B46C6995C9 /* LFAudioFrame.h */,
+				D437362E892330814385215A74222C33 /* LFAudioFrame.m */,
+				2BCDDFC84D7C3268DE8ECF49610F07B7 /* LFAVEncoder.h */,
+				AFEDA7E3B90DF7ABADC609A4EC1BC2BB /* LFAVEncoder.mm */,
+				FDA18D1621140DDF83DD92BACF2AF292 /* LFFrame.h */,
+				82FBDFC05B2175B1716C9B83E01B8328 /* LFFrame.m */,
+				958ECD26283AA87052F92D969FB22056 /* LFGPUImageBeautyFilter.h */,
+				D0A7E1E592A627695F76AA5B1034A2F9 /* LFGPUImageBeautyFilter.m */,
+				5F53B86BD0DCEF0DD20A10AACA12D68C /* LFGPUImageEmptyFilter.h */,
+				0B73E87DB163D39998C3CE250CF346C6 /* LFGPUImageEmptyFilter.m */,
+				00F51A2C24695BC441ADECCE2DEA04A2 /* LFH264VideoEncoder.h */,
+				2C84AD86749F242997104A69409F2B6B /* LFH264VideoEncoder.mm */,
+				C17087179D1D37DFD48AE93E0BD94881 /* LFHardwareAudioEncoder.h */,
+				AA36DE848BEDDED77325CC8F794841CF /* LFHardwareAudioEncoder.m */,
+				86146237E8EF3EEE3140FE4B348C5D54 /* LFHardwareVideoEncoder.h */,
+				62C9D6FDEB076094A7B7EB22C3AC73FB /* LFHardwareVideoEncoder.m */,
+				E7DD6E0D2516E5AE1AEB36F173241938 /* LFLiveAudioConfiguration.h */,
+				D4D61F8BE9ADAD887828F62BB3FD5A07 /* LFLiveAudioConfiguration.m */,
+				6ACF2C3CD017BF46FE261E976849183D /* LFLiveDebug.h */,
+				386CC38B22D2416A08F554D4026B8FB5 /* LFLiveDebug.m */,
+				1E51F42989B6E4BBEBA4D58DD0FB6FAD /* LFLiveKit.h */,
+				F91A1992DEC9D406429EBCE96F685393 /* LFLiveSession.h */,
+				3713E9F2383DA38F6C4EEBD5BB19DE63 /* LFLiveSession.m */,
+				F1357A164C3CA6358BFB7AB171565421 /* LFLiveStreamInfo.h */,
+				7771B068420EDDAF707CCDE589D8DC9E /* LFLiveStreamInfo.m */,
+				E4A21B76E2F9D888F04B530E5A7B1A91 /* LFLiveVideoConfiguration.h */,
+				84D02B3D7C9E729FAA4FD02966551D02 /* LFLiveVideoConfiguration.m */,
+				E60E4DEA4D49F7552AF0BFB8DCB50343 /* LFMP4Atom.h */,
+				B909E4AAEFB9910AF732AC76ECDA883C /* LFMP4Atom.m */,
+				4416D66103D7BE76196D16EB47EAC695 /* LFNALUnit.cpp */,
+				763405DB9AB5CC64A884DCB0080E449D /* LFNALUnit.h */,
+				67DB01D44006F332C0D57591C61B476D /* LFStreamingBuffer.h */,
+				F759A4BC7E32A074B32EEDFCDFF87376 /* LFStreamingBuffer.m */,
+				E6F62C85C629FD87608C15FFA6233604 /* LFStreamRTMPSocket.h */,
+				B520144596210AF9521D1B66846AEF29 /* LFStreamRtmpSocket.m */,
+				7F1402C9ECA94D7BAB434A4A0398CAA4 /* LFStreamSocket.h */,
+				31B57C24E5B50E2710FC7A08759B035C /* LFVideoCapture.h */,
+				2499BA530E27C2B4B9B32C2FFFEE0C38 /* LFVideoCapture.m */,
+				E974A33CA70CB44DF720274DDA44277D /* LFVideoEncoder.h */,
+				38AB472822103AFBDB91ED6DE3FB6DF3 /* LFVideoEncoder.m */,
+				CB6571BF0D0B2EE10D4780046836DE67 /* LFVideoEncoding.h */,
+				5EEF18C8D2B91DED69154343A9D6B3B7 /* LFVideoFrame.h */,
+				84D462D03890222455CC11CD40D19EDA /* LFVideoFrame.m */,
+				3F0C17D6E4387145CABBB8B2F763B33F /* NSMutableArray+LFAdd.h */,
+				A8581058BC4F6B4F87A5216196676C4F /* NSMutableArray+LFAdd.m */,
+				34BEDEFD84ABC2E117BA8A3E9E6D8C3D /* Frameworks */,
+				DF3454DD0EB6204C3C09A85117BF1D11 /* Support Files */,
+			);
+			path = LFLiveKit;
+			sourceTree = "<group>";
+		};
+		ADE8A5EC797D1B1C585002DAE9CEFC16 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				302416056C4168D0C18BC3536078CC7E /* BarrageRenderer.xcconfig */,
+				66FF4C0F6AC110FFE8204075FE4DD0BB /* BarrageRenderer-dummy.m */,
+				B05270F715B86460A40BDACE208EDA28 /* BarrageRenderer-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BarrageRenderer";
+			sourceTree = "<group>";
+		};
+		DF3454DD0EB6204C3C09A85117BF1D11 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				800DDDE632B6CB07CADB6DE5A829F163 /* LFLiveKit.xcconfig */,
+				11180C575BEEC90901942B76DAD281A7 /* LFLiveKit-dummy.m */,
+				92CF71685F7F1E5E2F0B4D4BD252A741 /* LFLiveKit-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LFLiveKit";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		35CF131E70C5F0E9221EB603D19E554A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F12AD874C9A9A8ED40154AC8A08FD186 /* LFAudioCapture.h in Headers */,
+				B87836FEB64A0A55B0B0A5CA1541B7E6 /* LFAudioEncoding.h in Headers */,
+				1FD79FEA70827264BBD6C9FB0EA8E08C /* LFAudioFrame.h in Headers */,
+				7936E29A2F20852308240BDFF50F7904 /* LFAVEncoder.h in Headers */,
+				A3706DAF33412AFBC80CCF3ADEF7402E /* LFFrame.h in Headers */,
+				3BA4BFA103954677E7AAAA68FA7126FD /* LFGPUImageBeautyFilter.h in Headers */,
+				E8AB17D04C7ACCF19D9A7E36082C6855 /* LFGPUImageEmptyFilter.h in Headers */,
+				6847235ABC62ED34B750C3B9223179E6 /* LFH264VideoEncoder.h in Headers */,
+				4BFA415300DBAFF7A7DB8B6BA32934B7 /* LFHardwareAudioEncoder.h in Headers */,
+				57D2CABC1C7526858DC0C746A89202B7 /* LFHardwareVideoEncoder.h in Headers */,
+				71F101E60C83941FA5D6C96D53A8F61A /* LFLiveAudioConfiguration.h in Headers */,
+				D71C46FB998EFA97992AFA4FCE09AA43 /* LFLiveDebug.h in Headers */,
+				B901F72289C0D7D5509D423F2B2E627E /* LFLiveKit.h in Headers */,
+				000407B8476B6B21EF1EE0C9A37EAB9F /* LFLiveSession.h in Headers */,
+				287CA0CE2881CA2AF9124A7C440C09CE /* LFLiveStreamInfo.h in Headers */,
+				6855A6C8650C91124070C2CC94F10F78 /* LFLiveVideoConfiguration.h in Headers */,
+				1D314779F988221DE06079498D58132A /* LFMP4Atom.h in Headers */,
+				7BB35C3AEEBE2E0F031C5B4C909CE01E /* LFNALUnit.h in Headers */,
+				936493DDFDE44FE9BBF81FF16A2DF343 /* LFStreamingBuffer.h in Headers */,
+				0D90B244B50ED80F72BF604EDBEBE805 /* LFStreamRTMPSocket.h in Headers */,
+				491F0918AB2367B1DAE760339CAE492D /* LFStreamSocket.h in Headers */,
+				446C3F052B28C1061F0FAFD69A08A33E /* LFVideoCapture.h in Headers */,
+				62679F7D5031159AD21003E1100EE7C5 /* LFVideoEncoder.h in Headers */,
+				8E08369D117D46E2B3504FB531FB6C0D /* LFVideoEncoding.h in Headers */,
+				54EFDC0C891C88593C9814857E58FCFA /* LFVideoFrame.h in Headers */,
+				0AD168CC4093117BA9614DCC1DB5E1A3 /* NSMutableArray+LFAdd.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABE89EEE7FA0AC180A27BF6344B667E6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF5E458A61F18D9403A6ADED64B01D67 /* BarrageCanvas.h in Headers */,
+				AD3F784181536C81EFFAB833E7F3EC07 /* BarrageClock.h in Headers */,
+				F91D718E8F10CDACBEF82760FD9C6A1F /* BarrageDescriptor.h in Headers */,
+				6B0C4A0753754382B281252548113AEC /* BarrageDispatcher.h in Headers */,
+				BF7286E696578C4B2769B08CE1E1DF98 /* BarrageFloatImageSprite.h in Headers */,
+				346C413793BFEE8EA354BFC6F672A400 /* BarrageFloatSprite.h in Headers */,
+				C18489C26594438B38B21AD9D61C43A2 /* BarrageFloatTextSprite.h in Headers */,
+				6ADEE4AD19C40506A7B9E477B8758120 /* BarrageHeader.h in Headers */,
+				A9E0D1D8E3A6EB56CD3B4CFE0593469C /* BarrageLoader.h in Headers */,
+				36EAF6DE0FA9ACD1B29D30F3E5BBB4FD /* BarrageRenderer.h in Headers */,
+				B71C164F1C05B9F3A1427BB5E39C9FA4 /* BarrageSprite.h in Headers */,
+				3F31F9485D677F29FCA495B136ABE182 /* BarrageSpriteFactory.h in Headers */,
+				68D4A2F7052B64C833A1D2FCF8733C2B /* BarrageSpriteProtocol.h in Headers */,
+				1A4F00F48ADA390F1D70FAF719F7427A /* BarrageSpriteUtility.h in Headers */,
+				3A28BE420318FADF16D15FC155AE84DB /* BarrageWalkImageSprite.h in Headers */,
+				541881E3F4132E2B516B63679183E460 /* BarrageWalkSprite.h in Headers */,
+				193821DA9521F81F6795A13A42872F87 /* BarrageWalkTextSprite.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		591DED6C4E2128C5D9D41BCB293AC26F /* LFLiveKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B14B7516D59D78F1BD5A01CBEB15F87A /* Build configuration list for PBXNativeTarget "LFLiveKit" */;
+			buildPhases = (
+				9393089E0220C1157D8944E20AACEF9E /* Sources */,
+				A9DC320E8D3F3A4F56ADCD2CB2A2F6B3 /* Frameworks */,
+				35CF131E70C5F0E9221EB603D19E554A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LFLiveKit;
+			productName = LFLiveKit;
+			productReference = ED10162C90C311542C3161A5701644B5 /* libLFLiveKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		63168CD450C71879183EF6EDD3C4BC16 /* Pods-XWPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1E1C0A6D163756DC780D057F05FE2C4 /* Build configuration list for PBXNativeTarget "Pods-XWPlayer" */;
+			buildPhases = (
+				9F92B14B8AC19C02B36E0D9336A26789 /* Sources */,
+				DEE6DB618A6D3BAD9CF0760FA69AEC95 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1084483C5BE23D9473C16B2D173DA023 /* PBXTargetDependency */,
+				281635B642A97A9688D12861B790E092 /* PBXTargetDependency */,
+			);
+			name = "Pods-XWPlayer";
+			productName = "Pods-XWPlayer";
+			productReference = 41196C0D304184B47CF6D63BEC64EE5C /* libPods-XWPlayer.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BED8A336C8A285C057115BB2145DAB46 /* BarrageRenderer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFF65B40D9DE2BDC23287C3193841334 /* Build configuration list for PBXNativeTarget "BarrageRenderer" */;
+			buildPhases = (
+				5D475C1E5B5105484CC7B4B7CA404535 /* Sources */,
+				6E331683916FC14FB3AF966B20728657 /* Frameworks */,
+				ABE89EEE7FA0AC180A27BF6344B667E6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BarrageRenderer;
+			productName = BarrageRenderer;
+			productReference = 7810B0E5E08D8828B968B19060D161E5 /* libBarrageRenderer.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 23C72E905997F977CE579C74F11DE62F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BED8A336C8A285C057115BB2145DAB46 /* BarrageRenderer */,
+				591DED6C4E2128C5D9D41BCB293AC26F /* LFLiveKit */,
+				63168CD450C71879183EF6EDD3C4BC16 /* Pods-XWPlayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5D475C1E5B5105484CC7B4B7CA404535 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				958707E8D2DE807A0858176A384986C3 /* BarrageCanvas.m in Sources */,
+				984CADDD67D7CC38BE0CD47EBBDBE583 /* BarrageClock.m in Sources */,
+				6B08F391A3AEDF1C30FC5A3254CF50DF /* BarrageDescriptor.m in Sources */,
+				3A2946DE3616B7964C3D8BBFDC5662AA /* BarrageDispatcher.m in Sources */,
+				22084A679ED68C8401AA4558E281BB73 /* BarrageFloatImageSprite.m in Sources */,
+				D782845F150BC6875EB3EC43077DFDEA /* BarrageFloatSprite.m in Sources */,
+				42AA02FDD0DC34A5692BF1F12D244F19 /* BarrageFloatTextSprite.m in Sources */,
+				EF65749E60F88FE6BD37DBAF97E9401F /* BarrageLoader.m in Sources */,
+				58EDC09B773117A7B43957CD7392EA2F /* BarrageRenderer-dummy.m in Sources */,
+				A2C2CC8B7C55283E2437F4D10BB9B54C /* BarrageRenderer.m in Sources */,
+				E4D87EA1531D01735603434360A81264 /* BarrageSprite.m in Sources */,
+				18E6D8C8DAC7E94805E12D21FC12276D /* BarrageSpriteFactory.m in Sources */,
+				72BADA3BB30362CE9477B6B73C377E97 /* BarrageSpriteUtility.m in Sources */,
+				E098A0AA84AF64853AE43D83C149AED0 /* BarrageWalkImageSprite.m in Sources */,
+				78F8538924EB0CEF6EC5A21390173BB7 /* BarrageWalkSprite.m in Sources */,
+				DED587CED8F88DEF639DA241553F7A1E /* BarrageWalkTextSprite.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9393089E0220C1157D8944E20AACEF9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FB7B4E069DD558EBBE02B42392DA911 /* LFAudioCapture.m in Sources */,
+				4219DC8DAE1F5C4EC03F3FD73991082F /* LFAudioFrame.m in Sources */,
+				601ED1B0885A327318ABF4F7A653D950 /* LFAVEncoder.mm in Sources */,
+				19986CEACF4B698AC23A1D9D71A6107E /* LFFrame.m in Sources */,
+				8DFCACFADDAAE6E296DF73BB497BE9A8 /* LFGPUImageBeautyFilter.m in Sources */,
+				045FAE095984FED0E77C03EC95517612 /* LFGPUImageEmptyFilter.m in Sources */,
+				3937EB5A6E297B0138C488778B3D1913 /* LFH264VideoEncoder.mm in Sources */,
+				392B6BEEC37498FC3555249CFA033C24 /* LFHardwareAudioEncoder.m in Sources */,
+				32F3AB0FC2E89D5A476FB77F4EF0A356 /* LFHardwareVideoEncoder.m in Sources */,
+				22D0621E079AEFFF9338ED62B72B0095 /* LFLiveAudioConfiguration.m in Sources */,
+				98FEA52F4EEB8B078C77D20DA361A75D /* LFLiveDebug.m in Sources */,
+				0867708BE49677AA236ED049D34945F0 /* LFLiveKit-dummy.m in Sources */,
+				55E171A9BED541A1DE66BE8F03353944 /* LFLiveSession.m in Sources */,
+				A7D2BAC5BDE73271FCD3B4C75DDCA4AB /* LFLiveStreamInfo.m in Sources */,
+				B8A83245436599BC1DFEAFA86D55E6F1 /* LFLiveVideoConfiguration.m in Sources */,
+				19B73EB44D17AA79807DBB1D0428FA6B /* LFMP4Atom.m in Sources */,
+				AE5927EA79D91745CE00011CAF352CD0 /* LFNALUnit.cpp in Sources */,
+				19A6E376B1F236B8394E24022E55558F /* LFStreamingBuffer.m in Sources */,
+				C5BEC065EF5A1304168CDB7964E7895D /* LFStreamRtmpSocket.m in Sources */,
+				2A4C9759470744A8EEAA99183DE3D009 /* LFVideoCapture.m in Sources */,
+				4D13E3999BA726705C4570D087A54A80 /* LFVideoEncoder.m in Sources */,
+				D2AEDB9EDDF3C38EE3B58B388C2BA7F8 /* LFVideoFrame.m in Sources */,
+				C071B10EBFCAF9951CC5C1B22C927323 /* NSMutableArray+LFAdd.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F92B14B8AC19C02B36E0D9336A26789 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08B6CE05E9298ED5E9BFF2BE3D7548FD /* Pods-XWPlayer-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1084483C5BE23D9473C16B2D173DA023 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BarrageRenderer;
+			target = BED8A336C8A285C057115BB2145DAB46 /* BarrageRenderer */;
+			targetProxy = 7D71A2CC436AC9439E801B35AC75C00D /* PBXContainerItemProxy */;
+		};
+		281635B642A97A9688D12861B790E092 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LFLiveKit;
+			target = 591DED6C4E2128C5D9D41BCB293AC26F /* LFLiveKit */;
+			targetProxy = C8E2000720E5EA0194BADDD851CF7522 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		065EDC7D92C0C3FB3B6134A2FE229882 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 814D7DDED31195A1FC4B6DE003737639 /* Pods-XWPlayer.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		29EAF0378FC98036E8EC66FAC33AF2F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 302416056C4168D0C18BC3536078CC7E /* BarrageRenderer.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BarrageRenderer/BarrageRenderer-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2B4F85FED0DFD308E4295F13D2022305 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 302416056C4168D0C18BC3536078CC7E /* BarrageRenderer.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BarrageRenderer/BarrageRenderer-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		39E680F3974483814C31751D6ACD1E47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 800DDDE632B6CB07CADB6DE5A829F163 /* LFLiveKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LFLiveKit/LFLiveKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		47BEF9D903506B003EA5C2B249729489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		83547762BB5ACBE4BDBCA93AF47958EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 800DDDE632B6CB07CADB6DE5A829F163 /* LFLiveKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LFLiveKit/LFLiveKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AAF678CED40D3499169D10F63CA0719E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B6BC5E9431B84E7EB88636539EAE863E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DF604C28E87DF6F304EC96B5760156E /* Pods-XWPlayer.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47BEF9D903506B003EA5C2B249729489 /* Debug */,
+				AAF678CED40D3499169D10F63CA0719E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B14B7516D59D78F1BD5A01CBEB15F87A /* Build configuration list for PBXNativeTarget "LFLiveKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83547762BB5ACBE4BDBCA93AF47958EF /* Debug */,
+				39E680F3974483814C31751D6ACD1E47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFF65B40D9DE2BDC23287C3193841334 /* Build configuration list for PBXNativeTarget "BarrageRenderer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B4F85FED0DFD308E4295F13D2022305 /* Debug */,
+				29EAF0378FC98036E8EC66FAC33AF2F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1E1C0A6D163756DC780D057F05FE2C4 /* Build configuration list for PBXNativeTarget "Pods-XWPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6BC5E9431B84E7EB88636539EAE863E /* Debug */,
+				065EDC7D92C0C3FB3B6134A2FE229882 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

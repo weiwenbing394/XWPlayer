@@ -17,6 +17,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[AVAudioSession sharedInstance]setCategory: AVAudioSessionCategorySoloAmbient error:nil];
+    [[AVAudioSession sharedInstance]setActive: YES error:nil];
     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController=[[RootTabBarController alloc]init];
     self.window.backgroundColor=[UIColor whiteColor];

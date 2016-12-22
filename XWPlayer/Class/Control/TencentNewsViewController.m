@@ -10,6 +10,7 @@
 #import "SidModel.h"
 #import "VideoModel.h"
 #import "VideoCell.h"
+#import "DetailViewController.h"
 
 @interface TencentNewsViewController ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 
@@ -123,7 +124,12 @@ static NSString *const indentifer=@"Cell";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
+    VideoModel *   model = [self.dataSource objectAtIndex:indexPath.row];
+    DetailViewController *detail=[[DetailViewController alloc]init];
+    detail.urlStr=model.m3u8_url;
+    detail.titleStr=model.title;
+    detail.imageStr=model.cover;
+    [self.navigationController pushViewController:detail animated:YES];
 }
 #pragma mark 视频播放操作
 //开始播放
@@ -338,6 +344,7 @@ static NSString *const indentifer=@"Cell";
     [_xwPlayer bringSubviewToFront:_xwPlayer.bottomView];
     [_xwPlayer bringSubviewToFront:_xwPlayer.closeBtn];
 }
+
 
 //关闭视频播放
 - (void)closeTheVideo:(NSNotification *)notice{

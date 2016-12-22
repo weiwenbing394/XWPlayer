@@ -7,9 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06625D0B6AC8397A9BFC06FE /* libPods-XWPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CAB64DCE3D486529A5ACBA /* libPods-XWPlayer.a */; };
+		514FAED71E07C55A00C4021F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 514FAED01E07C55A00C4021F /* .gitignore */; };
+		514FAED81E07C55A00C4021F /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 514FAED21E07C55A00C4021F /* IJKMediaFramework.framework */; };
+		514FAED91E07C55A00C4021F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 514FAED31E07C55A00C4021F /* LICENSE */; };
+		514FAEDA1E07C55A00C4021F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 514FAED41E07C55A00C4021F /* README.md */; };
+		514FAEDB1E07C55A00C4021F /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 514FAED61E07C55A00C4021F /* IJKMediaFramework.framework */; };
+		514FAEDE1E07C5D000C4021F /* PlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 514FAEDD1E07C5D000C4021F /* PlayerModel.m */; };
+		514FAEE11E07C5FC00C4021F /* DMHeartFlyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 514FAEE01E07C5FC00C4021F /* DMHeartFlyView.m */; };
+		514FAEE41E07C61800C4021F /* PlayerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 514FAEE31E07C61800C4021F /* PlayerTableViewCell.m */; };
+		514FAEE71E07C62D00C4021F /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 514FAEE61E07C62D00C4021F /* CustomButton.m */; };
+		514FAF851E07D33D00C4021F /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 514FAF841E07D33D00C4021F /* PlayerViewController.m */; };
+		514FAF8A1E07D8CB00C4021F /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 514FAF891E07D8CB00C4021F /* libbz2.tbd */; };
+		514FAF8C1E07D8D600C4021F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 514FAF8B1E07D8D600C4021F /* libz.tbd */; };
 		518839FF1E00E31100624E36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 518839FE1E00E31100624E36 /* main.m */; };
 		51883A021E00E31100624E36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51883A011E00E31100624E36 /* AppDelegate.m */; };
-		51883A051E00E31100624E36 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51883A041E00E31100624E36 /* ViewController.m */; };
 		51883A081E00E31100624E36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51883A061E00E31100624E36 /* Main.storyboard */; };
 		51883A0A1E00E31100624E36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51883A091E00E31100624E36 /* Assets.xcassets */; };
 		51883A0D1E00E31100624E36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51883A0B1E00E31100624E36 /* LaunchScreen.storyboard */; };
@@ -87,6 +99,22 @@
 		51883B141E0248DF00624E36 /* NetEaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51883B121E0248DF00624E36 /* NetEaseViewController.m */; };
 		51883B151E0248DF00624E36 /* NetEaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51883B131E0248DF00624E36 /* NetEaseViewController.xib */; };
 		51883B181E03CE7100624E36 /* TBPlayerLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51883B171E03CE7100624E36 /* TBPlayerLayerView.m */; };
+		51BB31861E08CB090037EEB2 /* StartLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BB31851E08CB090037EEB2 /* StartLiveViewController.m */; };
+		51BB31891E08CE1C0037EEB2 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BB31881E08CE1C0037EEB2 /* MyViewController.m */; };
+		51BB318C1E08D0830037EEB2 /* BaseTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BB318B1E08D0830037EEB2 /* BaseTabbar.m */; };
+		51BB31901E08DBBE0037EEB2 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BB318F1E08DBBE0037EEB2 /* UIImage+Image.m */; };
+		51BB31931E08DDBC0037EEB2 /* UIView+LBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BB31921E08DDBC0037EEB2 /* UIView+LBExtension.m */; };
+		51BB31FB1E08E00A0037EEB2 /* LFLivePreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BB31FA1E08E00A0037EEB2 /* LFLivePreview.m */; };
+		51BB31FE1E0902340037EEB2 /* UIView+SLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BB31FD1E0902340037EEB2 /* UIView+SLExtension.m */; };
+		51BB32011E0902830037EEB2 /* UIControl+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BB32001E0902830037EEB2 /* UIControl+Add.m */; };
+		51BB34181E0904C50037EEB2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51BB34171E0904C50037EEB2 /* OpenGLES.framework */; };
+		51BB341C1E0904DE0037EEB2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51BB341B1E0904DE0037EEB2 /* MobileCoreServices.framework */; };
+		51BB341E1E0904ED0037EEB2 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51BB341D1E0904ED0037EEB2 /* CoreVideo.framework */; };
+		51BB34201E0904FB0037EEB2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51BB341F1E0904FA0037EEB2 /* CoreMedia.framework */; };
+		51BB34221E0905B10037EEB2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51BB34211E0905B10037EEB2 /* QuartzCore.framework */; };
+		51BB36EF1E090C880037EEB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51BB36EE1E090C880037EEB2 /* CoreGraphics.framework */; };
+		51BB36F21E09247D0037EEB2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BB36F11E09247D0037EEB2 /* DetailViewController.m */; };
+		51E3B5B61E0B73670096B48E /* BarrageWalkImageTextSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E3B5B51E0B73670096B48E /* BarrageWalkImageTextSprite.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,12 +135,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11F3F0A542868E05EF40A347 /* Pods-XWPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XWPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XWPlayer/Pods-XWPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		514FAED01E07C55A00C4021F /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		514FAED21E07C55A00C4021F /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		514FAED31E07C55A00C4021F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		514FAED41E07C55A00C4021F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		514FAED61E07C55A00C4021F /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		514FAEDC1E07C5D000C4021F /* PlayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerModel.h; sourceTree = "<group>"; };
+		514FAEDD1E07C5D000C4021F /* PlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerModel.m; sourceTree = "<group>"; };
+		514FAEDF1E07C5FC00C4021F /* DMHeartFlyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMHeartFlyView.h; sourceTree = "<group>"; };
+		514FAEE01E07C5FC00C4021F /* DMHeartFlyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMHeartFlyView.m; sourceTree = "<group>"; };
+		514FAEE21E07C61800C4021F /* PlayerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerTableViewCell.h; sourceTree = "<group>"; };
+		514FAEE31E07C61800C4021F /* PlayerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerTableViewCell.m; sourceTree = "<group>"; };
+		514FAEE51E07C62D00C4021F /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		514FAEE61E07C62D00C4021F /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		514FAF831E07D33D00C4021F /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		514FAF841E07D33D00C4021F /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		514FAF891E07D8CB00C4021F /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		514FAF8B1E07D8D600C4021F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		518839FA1E00E31100624E36 /* XWPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XWPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		518839FE1E00E31100624E36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		51883A001E00E31100624E36 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		51883A011E00E31100624E36 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		51883A031E00E31100624E36 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		51883A041E00E31100624E36 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		51883A071E00E31100624E36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		51883A091E00E31100624E36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51883A0C1E00E31100624E36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -255,6 +299,34 @@
 		51883B131E0248DF00624E36 /* NetEaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetEaseViewController.xib; sourceTree = "<group>"; };
 		51883B161E03CE7100624E36 /* TBPlayerLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBPlayerLayerView.h; sourceTree = "<group>"; };
 		51883B171E03CE7100624E36 /* TBPlayerLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBPlayerLayerView.m; sourceTree = "<group>"; };
+		51BB31841E08CB090037EEB2 /* StartLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartLiveViewController.h; sourceTree = "<group>"; };
+		51BB31851E08CB090037EEB2 /* StartLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartLiveViewController.m; sourceTree = "<group>"; };
+		51BB31871E08CE1C0037EEB2 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		51BB31881E08CE1C0037EEB2 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		51BB318A1E08D0830037EEB2 /* BaseTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabbar.h; sourceTree = "<group>"; };
+		51BB318B1E08D0830037EEB2 /* BaseTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabbar.m; sourceTree = "<group>"; };
+		51BB318E1E08DBBE0037EEB2 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
+		51BB318F1E08DBBE0037EEB2 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
+		51BB31911E08DDBC0037EEB2 /* UIView+LBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LBExtension.h"; sourceTree = "<group>"; };
+		51BB31921E08DDBC0037EEB2 /* UIView+LBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LBExtension.m"; sourceTree = "<group>"; };
+		51BB31F91E08E00A0037EEB2 /* LFLivePreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFLivePreview.h; sourceTree = "<group>"; };
+		51BB31FA1E08E00A0037EEB2 /* LFLivePreview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFLivePreview.m; sourceTree = "<group>"; };
+		51BB31FC1E0902340037EEB2 /* UIView+SLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SLExtension.h"; sourceTree = "<group>"; };
+		51BB31FD1E0902340037EEB2 /* UIView+SLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SLExtension.m"; sourceTree = "<group>"; };
+		51BB31FF1E0902830037EEB2 /* UIControl+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+Add.h"; sourceTree = "<group>"; };
+		51BB32001E0902830037EEB2 /* UIControl+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Add.m"; sourceTree = "<group>"; };
+		51BB34171E0904C50037EEB2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		51BB341B1E0904DE0037EEB2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		51BB341D1E0904ED0037EEB2 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		51BB341F1E0904FA0037EEB2 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		51BB34211E0905B10037EEB2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		51BB36EE1E090C880037EEB2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		51BB36F01E09247D0037EEB2 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		51BB36F11E09247D0037EEB2 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		51E3B5B41E0B73670096B48E /* BarrageWalkImageTextSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageWalkImageTextSprite.h; sourceTree = "<group>"; };
+		51E3B5B51E0B73670096B48E /* BarrageWalkImageTextSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageWalkImageTextSprite.m; sourceTree = "<group>"; };
+		56214890377721214980F925 /* Pods-XWPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XWPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-XWPlayer/Pods-XWPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		75CAB64DCE3D486529A5ACBA /* libPods-XWPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XWPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +334,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51BB36EF1E090C880037EEB2 /* CoreGraphics.framework in Frameworks */,
+				51BB34221E0905B10037EEB2 /* QuartzCore.framework in Frameworks */,
+				51BB34201E0904FB0037EEB2 /* CoreMedia.framework in Frameworks */,
+				51BB341E1E0904ED0037EEB2 /* CoreVideo.framework in Frameworks */,
+				51BB341C1E0904DE0037EEB2 /* MobileCoreServices.framework in Frameworks */,
+				51BB34181E0904C50037EEB2 /* OpenGLES.framework in Frameworks */,
+				514FAF8C1E07D8D600C4021F /* libz.tbd in Frameworks */,
+				514FAF8A1E07D8CB00C4021F /* libbz2.tbd in Frameworks */,
+				514FAED81E07C55A00C4021F /* IJKMediaFramework.framework in Frameworks */,
+				514FAEDB1E07C55A00C4021F /* IJKMediaFramework.framework in Frameworks */,
+				06625D0B6AC8397A9BFC06FE /* libPods-XWPlayer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +365,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		514FAECF1E07C55A00C4021F /* ijkplayerLib */ = {
+			isa = PBXGroup;
+			children = (
+				514FAED01E07C55A00C4021F /* .gitignore */,
+				514FAED11E07C55A00C4021F /* Debug-IJKMediaFramework */,
+				514FAED31E07C55A00C4021F /* LICENSE */,
+				514FAED41E07C55A00C4021F /* README.md */,
+				514FAED51E07C55A00C4021F /* Release-IJKMediaFramework */,
+			);
+			path = ijkplayerLib;
+			sourceTree = "<group>";
+		};
+		514FAED11E07C55A00C4021F /* Debug-IJKMediaFramework */ = {
+			isa = PBXGroup;
+			children = (
+				514FAED21E07C55A00C4021F /* IJKMediaFramework.framework */,
+			);
+			path = "Debug-IJKMediaFramework";
+			sourceTree = "<group>";
+		};
+		514FAED51E07C55A00C4021F /* Release-IJKMediaFramework */ = {
+			isa = PBXGroup;
+			children = (
+				514FAED61E07C55A00C4021F /* IJKMediaFramework.framework */,
+			);
+			path = "Release-IJKMediaFramework";
+			sourceTree = "<group>";
+		};
+		514FAF861E07D8BB00C4021F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51BB36EE1E090C880037EEB2 /* CoreGraphics.framework */,
+				51BB34211E0905B10037EEB2 /* QuartzCore.framework */,
+				51BB341F1E0904FA0037EEB2 /* CoreMedia.framework */,
+				51BB341D1E0904ED0037EEB2 /* CoreVideo.framework */,
+				51BB341B1E0904DE0037EEB2 /* MobileCoreServices.framework */,
+				51BB34171E0904C50037EEB2 /* OpenGLES.framework */,
+				514FAF8B1E07D8D600C4021F /* libz.tbd */,
+				514FAF891E07D8CB00C4021F /* libbz2.tbd */,
+				75CAB64DCE3D486529A5ACBA /* libPods-XWPlayer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		518839F11E00E31100624E36 = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +416,8 @@
 				51883A161E00E31100624E36 /* XWPlayerTests */,
 				51883A211E00E31100624E36 /* XWPlayerUITests */,
 				518839FB1E00E31100624E36 /* Products */,
+				514FAF861E07D8BB00C4021F /* Frameworks */,
+				EFE0C57434E4278468E450FA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -305,6 +434,7 @@
 		518839FC1E00E31100624E36 /* XWPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				51BB318D1E08DBA30037EEB2 /* CateGory */,
 				51883A321E00E44600624E36 /* ThirdLib */,
 				51883A331E00E44600624E36 /* Resource */,
 				51883A341E00E44600624E36 /* Class */,
@@ -312,8 +442,6 @@
 				51883A301E00E3D800624E36 /* XWPlayer */,
 				51883A001E00E31100624E36 /* AppDelegate.h */,
 				51883A011E00E31100624E36 /* AppDelegate.m */,
-				51883A031E00E31100624E36 /* ViewController.h */,
-				51883A041E00E31100624E36 /* ViewController.m */,
 				51883A061E00E31100624E36 /* Main.storyboard */,
 				51883B101E02478900624E36 /* WMPlayer.pch */,
 				51883A091E00E31100624E36 /* Assets.xcassets */,
@@ -365,6 +493,7 @@
 		51883A321E00E44600624E36 /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
+				514FAECF1E07C55A00C4021F /* ijkplayerLib */,
 				51883AA21E00E46E00624E36 /* Masonry */,
 				51883A361E00E45D00624E36 /* MJRefresh */,
 				51883A631E00E45D00624E36 /* SDWebImage */,
@@ -577,6 +706,14 @@
 				51883AE41E00E5DB00624E36 /* VideoCell.h */,
 				51883AE51E00E5DB00624E36 /* VideoCell.m */,
 				51883AE61E00E5DB00624E36 /* VideoCell.xib */,
+				514FAEDF1E07C5FC00C4021F /* DMHeartFlyView.h */,
+				514FAEE01E07C5FC00C4021F /* DMHeartFlyView.m */,
+				514FAEE21E07C61800C4021F /* PlayerTableViewCell.h */,
+				514FAEE31E07C61800C4021F /* PlayerTableViewCell.m */,
+				514FAEE51E07C62D00C4021F /* CustomButton.h */,
+				514FAEE61E07C62D00C4021F /* CustomButton.m */,
+				51BB31F91E08E00A0037EEB2 /* LFLivePreview.h */,
+				51BB31FA1E08E00A0037EEB2 /* LFLivePreview.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -597,6 +734,8 @@
 				51883AEA1E00E5E900624E36 /* SidModel.m */,
 				51883AEB1E00E5E900624E36 /* VideoModel.h */,
 				51883AEC1E00E5E900624E36 /* VideoModel.m */,
+				514FAEDC1E07C5D000C4021F /* PlayerModel.h */,
+				514FAEDD1E07C5D000C4021F /* PlayerModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -608,6 +747,8 @@
 				51883AFC1E023E5F00624E36 /* BaseNavigationController.m */,
 				51883AFE1E02428600624E36 /* RootTabBarController.h */,
 				51883AFF1E02428600624E36 /* RootTabBarController.m */,
+				51BB318A1E08D0830037EEB2 /* BaseTabbar.h */,
+				51BB318B1E08D0830037EEB2 /* BaseTabbar.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -621,11 +762,45 @@
 				51883B081E02432000624E36 /* SinaNewsViewController.h */,
 				51883B091E02432000624E36 /* SinaNewsViewController.m */,
 				51883B0A1E02432000624E36 /* SinaNewsViewController.xib */,
+				51BB36F01E09247D0037EEB2 /* DetailViewController.h */,
+				51BB36F11E09247D0037EEB2 /* DetailViewController.m */,
 				51883B111E0248DF00624E36 /* NetEaseViewController.h */,
 				51883B121E0248DF00624E36 /* NetEaseViewController.m */,
 				51883B131E0248DF00624E36 /* NetEaseViewController.xib */,
+				514FAF831E07D33D00C4021F /* PlayerViewController.h */,
+				514FAF841E07D33D00C4021F /* PlayerViewController.m */,
+				51BB31841E08CB090037EEB2 /* StartLiveViewController.h */,
+				51BB31851E08CB090037EEB2 /* StartLiveViewController.m */,
+				51BB31871E08CE1C0037EEB2 /* MyViewController.h */,
+				51BB31881E08CE1C0037EEB2 /* MyViewController.m */,
+				51E3B5B41E0B73670096B48E /* BarrageWalkImageTextSprite.h */,
+				51E3B5B51E0B73670096B48E /* BarrageWalkImageTextSprite.m */,
 			);
 			name = Else;
+			sourceTree = "<group>";
+		};
+		51BB318D1E08DBA30037EEB2 /* CateGory */ = {
+			isa = PBXGroup;
+			children = (
+				51BB31FF1E0902830037EEB2 /* UIControl+Add.h */,
+				51BB32001E0902830037EEB2 /* UIControl+Add.m */,
+				51BB318E1E08DBBE0037EEB2 /* UIImage+Image.h */,
+				51BB318F1E08DBBE0037EEB2 /* UIImage+Image.m */,
+				51BB31911E08DDBC0037EEB2 /* UIView+LBExtension.h */,
+				51BB31921E08DDBC0037EEB2 /* UIView+LBExtension.m */,
+				51BB31FC1E0902340037EEB2 /* UIView+SLExtension.h */,
+				51BB31FD1E0902340037EEB2 /* UIView+SLExtension.m */,
+			);
+			name = CateGory;
+			sourceTree = "<group>";
+		};
+		EFE0C57434E4278468E450FA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11F3F0A542868E05EF40A347 /* Pods-XWPlayer.debug.xcconfig */,
+				56214890377721214980F925 /* Pods-XWPlayer.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -635,9 +810,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51883A271E00E31100624E36 /* Build configuration list for PBXNativeTarget "XWPlayer" */;
 			buildPhases = (
+				508CFCCD0C9DCA4C4DF307DE /* [CP] Check Pods Manifest.lock */,
 				518839F61E00E31100624E36 /* Sources */,
 				518839F71E00E31100624E36 /* Frameworks */,
 				518839F81E00E31100624E36 /* Resources */,
+				7B907374E3AC85BE2197DC7E /* [CP] Embed Pods Frameworks */,
+				40A79A1387F2ACCF5C36038F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -695,7 +873,13 @@
 				TargetAttributes = {
 					518839F91E00E31100624E36 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = D3S96SQKWE;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					51883A121E00E31100624E36 = {
 						CreatedOnToolsVersion = 8.1;
@@ -743,6 +927,7 @@
 				51883AD91E00E53900624E36 /* message@2x.png in Resources */,
 				51883A0D1E00E31100624E36 /* LaunchScreen.storyboard in Resources */,
 				51883A0A1E00E31100624E36 /* Assets.xcassets in Resources */,
+				514FAED91E07C55A00C4021F /* LICENSE in Resources */,
 				51883ADE1E00E53900624E36 /* time.png in Resources */,
 				51883A8F1E00E45D00624E36 /* MJRefresh.bundle in Resources */,
 				51883B071E02430900624E36 /* TencentNewsViewController.xib in Resources */,
@@ -750,6 +935,7 @@
 				51883B151E0248DF00624E36 /* NetEaseViewController.xib in Resources */,
 				51883ADC1E00E53900624E36 /* share_s@2x.png in Resources */,
 				51883B0C1E02432000624E36 /* SinaNewsViewController.xib in Resources */,
+				514FAED71E07C55A00C4021F /* .gitignore in Resources */,
 				51883AC41E00E4A700624E36 /* XWPlayer.bundle in Resources */,
 				51883A081E00E31100624E36 /* Main.storyboard in Resources */,
 				51883AE01E00E53900624E36 /* WMPlayer.gif in Resources */,
@@ -776,21 +962,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		40A79A1387F2ACCF5C36038F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XWPlayer/Pods-XWPlayer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		508CFCCD0C9DCA4C4DF307DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7B907374E3AC85BE2197DC7E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XWPlayer/Pods-XWPlayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		518839F61E00E31100624E36 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51BB31931E08DDBC0037EEB2 /* UIView+LBExtension.m in Sources */,
 				51883B001E02428600624E36 /* RootTabBarController.m in Sources */,
+				51BB36F21E09247D0037EEB2 /* DetailViewController.m in Sources */,
 				51883AC11E00E46F00624E36 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				51883AE71E00E5DB00624E36 /* VideoCell.m in Sources */,
-				51883A051E00E31100624E36 /* ViewController.m in Sources */,
 				51883A9A1E00E45D00624E36 /* SDWebImageManager.m in Sources */,
 				51883AFD1E023E5F00624E36 /* BaseNavigationController.m in Sources */,
 				51883A961E00E45D00624E36 /* SDWebImageCompat.m in Sources */,
 				51883B061E02430900624E36 /* TencentNewsViewController.m in Sources */,
 				51883A9B1E00E45D00624E36 /* SDWebImagePrefetcher.m in Sources */,
 				51883AED1E00E5E900624E36 /* SidModel.m in Sources */,
+				51BB31FE1E0902340037EEB2 /* UIView+SLExtension.m in Sources */,
 				51883ABA1E00E46E00624E36 /* MASCompositeConstraint.m in Sources */,
 				51883ABE1E00E46E00624E36 /* MASViewAttribute.m in Sources */,
 				51883AA01E00E45D00624E36 /* UIImageView+WebCache.m in Sources */,
@@ -802,7 +1038,9 @@
 				51883AF11E00E5F500624E36 /* DataManager.m in Sources */,
 				51883A9F1E00E45D00624E36 /* UIImageView+HighlightedWebCache.m in Sources */,
 				51883A861E00E45D00624E36 /* MJRefreshAutoGifFooter.m in Sources */,
+				514FAF851E07D33D00C4021F /* PlayerViewController.m in Sources */,
 				51883A9C1E00E45D00624E36 /* UIButton+WebCache.m in Sources */,
+				51BB31861E08CB090037EEB2 /* StartLiveViewController.m in Sources */,
 				51883A8C1E00E45D00624E36 /* MJRefreshGifHeader.m in Sources */,
 				51883AC01E00E46F00624E36 /* NSArray+MASAdditions.m in Sources */,
 				51883A021E00E31100624E36 /* AppDelegate.m in Sources */,
@@ -812,19 +1050,29 @@
 				51883A9D1E00E45D00624E36 /* UIImage+GIF.m in Sources */,
 				51883A921E00E45D00624E36 /* UIScrollView+MJRefresh.m in Sources */,
 				51883ABD1E00E46E00624E36 /* MASLayoutConstraint.m in Sources */,
+				51BB31FB1E08E00A0037EEB2 /* LFLivePreview.m in Sources */,
 				51883AA11E00E45D00624E36 /* UIView+WebCacheOperation.m in Sources */,
 				51883A911E00E45D00624E36 /* UIScrollView+MJExtension.m in Sources */,
 				51883A9E1E00E45D00624E36 /* UIImage+MultiFormat.m in Sources */,
 				51883A971E00E45D00624E36 /* SDWebImageDecoder.m in Sources */,
 				51883A941E00E45D00624E36 /* NSData+ImageContentType.m in Sources */,
+				514FAEE71E07C62D00C4021F /* CustomButton.m in Sources */,
+				514FAEDE1E07C5D000C4021F /* PlayerModel.m in Sources */,
 				51883B0B1E02432000624E36 /* SinaNewsViewController.m in Sources */,
 				51883AC21E00E46F00624E36 /* View+MASAdditions.m in Sources */,
+				514FAEDA1E07C55A00C4021F /* README.md in Sources */,
 				51883A931E00E45D00624E36 /* UIView+MJExtension.m in Sources */,
 				51883A991E00E45D00624E36 /* SDWebImageDownloaderOperation.m in Sources */,
 				51883A811E00E45D00624E36 /* MJRefreshAutoFooter.m in Sources */,
+				51BB31901E08DBBE0037EEB2 /* UIImage+Image.m in Sources */,
+				51BB318C1E08D0830037EEB2 /* BaseTabbar.m in Sources */,
+				514FAEE41E07C61800C4021F /* PlayerTableViewCell.m in Sources */,
 				51883A891E00E45D00624E36 /* MJRefreshBackGifFooter.m in Sources */,
+				51BB32011E0902830037EEB2 /* UIControl+Add.m in Sources */,
+				51BB31891E08CE1C0037EEB2 /* MyViewController.m in Sources */,
 				51883A8D1E00E45D00624E36 /* MJRefreshNormalHeader.m in Sources */,
 				51883A881E00E45D00624E36 /* MJRefreshAutoStateFooter.m in Sources */,
+				514FAEE11E07C5FC00C4021F /* DMHeartFlyView.m in Sources */,
 				51883A821E00E45D00624E36 /* MJRefreshBackFooter.m in Sources */,
 				51883ABF1E00E46E00624E36 /* MASViewConstraint.m in Sources */,
 				51883A981E00E45D00624E36 /* SDWebImageDownloader.m in Sources */,
@@ -832,6 +1080,7 @@
 				51883ABC1E00E46E00624E36 /* MASConstraintMaker.m in Sources */,
 				51883B181E03CE7100624E36 /* TBPlayerLayerView.m in Sources */,
 				51883A901E00E45D00624E36 /* MJRefreshConst.m in Sources */,
+				51E3B5B61E0B73670096B48E /* BarrageWalkImageTextSprite.m in Sources */,
 				51883A8A1E00E45D00624E36 /* MJRefreshBackNormalFooter.m in Sources */,
 				51883AEE1E00E5E900624E36 /* VideoModel.m in Sources */,
 				51883A8E1E00E45D00624E36 /* MJRefreshStateHeader.m in Sources */,
@@ -980,12 +1229,28 @@
 		};
 		51883A281E00E31100624E36 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11F3F0A542868E05EF40A347 /* Pods-XWPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = "/Users/dajiabao/项目/项目合集/自做项目/XWPlayer/XWPlayer/WMPlayer.pch";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = D3S96SQKWE;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XWPlayer/ThirdLib/ijkplayerLib/Debug-IJKMediaFramework",
+					"$(PROJECT_DIR)/XWPlayer/ThirdLib/ijkplayerLib/Release-IJKMediaFramework",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/XWPlayer/WMPlayer.pch";
 				INFOPLIST_FILE = XWPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_QUOTE_LINKER_ARGUMENTS_FOR_COMPILER_DRIVER = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XWPlayer/ThirdLib",
+				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dajiabao.XWPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -993,12 +1258,28 @@
 		};
 		51883A291E00E31100624E36 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56214890377721214980F925 /* Pods-XWPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = "/Users/dajiabao/项目/项目合集/自做项目/XWPlayer/XWPlayer/WMPlayer.pch";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = D3S96SQKWE;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XWPlayer/ThirdLib/ijkplayerLib/Debug-IJKMediaFramework",
+					"$(PROJECT_DIR)/XWPlayer/ThirdLib/ijkplayerLib/Release-IJKMediaFramework",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/XWPlayer/WMPlayer.pch";
 				INFOPLIST_FILE = XWPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_QUOTE_LINKER_ARGUMENTS_FOR_COMPILER_DRIVER = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XWPlayer/ThirdLib",
+				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dajiabao.XWPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1069,6 +1350,7 @@
 				51883A291E00E31100624E36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		51883A2A1E00E31100624E36 /* Build configuration list for PBXNativeTarget "XWPlayerTests" */ = {
 			isa = XCConfigurationList;
@@ -1077,6 +1359,7 @@
 				51883A2C1E00E31100624E36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		51883A2D1E00E31100624E36 /* Build configuration list for PBXNativeTarget "XWPlayerUITests" */ = {
 			isa = XCConfigurationList;
@@ -1085,6 +1368,7 @@
 				51883A2F1E00E31100624E36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

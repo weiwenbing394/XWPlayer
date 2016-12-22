@@ -1,0 +1,15 @@
+PODS:
+  - BarrageRenderer (1.9.0)
+  - LFLiveKit (2.3)
+
+DEPENDENCIES:
+  - BarrageRenderer
+  - LFLiveKit
+
+SPEC CHECKSUMS:
+  BarrageRenderer: a5b54aef34eed1eab48f35ed594082ae446947c9
+  LFLiveKit: 76a5cb34509f8cbe25e3a95824cf80f36d36679b
+
+PODFILE CHECKSUM: 1a29820d02feb7630ea4bd38886a94a109e7732b
+
+COCOAPODS: 1.0.1
