@@ -12,7 +12,7 @@
 #import "VideoCell.h"
 #import "DetailViewController.h"
 
-@interface SinaNewsViewController ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
+@interface SinaNewsViewController ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,XWPlayerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 
@@ -32,12 +32,6 @@ static NSString *const indentifer=@"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title=@"新浪视频";
-    //注册播放完成通知
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(videoDidFinished:) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
-    //注册全屏播放通知
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(fullScreenBtnClick:) name:@"fullScreenBtnClickNotice" object:nil];
-    //注册关闭视频通知
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(closeTheVideo:) name:@"closeTheVideo" object:nil];
     //添加下拉刷新
     [self addRefreshAndFootMore];
     [self.tableview.mj_header beginRefreshing];
@@ -79,6 +73,21 @@ static NSString *const indentifer=@"Cell";
         NSLog(@"加载失败");
     }];
 }
+
+#pragma mark XWPlayerDelegate
+//点击关闭按钮代理方法
+-(void)xwplayer:(XWPlayer *)xwplayer clickedCloseButton:(UIButton *)closeBtn{
+    [self closeTheVideo:closeBtn];
+};
+//点击全屏按钮代理方法
+-(void)xwplayer:(XWPlayer *)xwplayer clickedFullScreenButton:(UIButton *)fullScreenBtn{
+    [self fullScreenBtnClick:fullScreenBtn];
+};
+//播放完毕的代理方法
+-(void)xwplayerFinishedPlay:(XWPlayer *)xwplayer{
+    [self videoDidFinished];
+};
+
 
 
 #pragma mark  tableviewDelegate
@@ -134,7 +143,9 @@ static NSString *const indentifer=@"Cell";
             [self.xwPlayer removeFromSuperview];
             [self.xwPlayer setVideoURLStr:model.mp4_url];
         }else{
-            XWPlayer *player=[[XWPlayer alloc]initWithFrame:currentCell.backgroundIV.bounds videoURLStr:model.mp4_url];
+            XWPlayer *player=[[XWPlayer alloc]initWithFrame:currentCell.backgroundIV.bounds];
+            [player setVideoURLStr:model.mp4_url];
+            player.xwDelegate=self;
             self.xwPlayer=player;
         }
         
@@ -205,7 +216,7 @@ static NSString *const indentifer=@"Cell";
 
 
 //播放完成
-- (void)videoDidFinished:(NSNotification *)notice{
+- (void)videoDidFinished{
     [_xwPlayer.player pause];
     [_xwPlayer.player.currentItem cancelPendingSeeks];
     [_xwPlayer.player.currentItem.asset cancelLoading];
@@ -216,8 +227,8 @@ static NSString *const indentifer=@"Cell";
 }
 
 //全屏播放
-- (void)fullScreenBtnClick:(NSNotification *)notice{
-    UIButton *fullScreenBtn=(UIButton *)[notice object];
+- (void)fullScreenBtnClick:(UIButton *)fullBtn{
+    UIButton *fullScreenBtn=fullBtn;
     if (fullScreenBtn.isSelected) {
         [self toFullScreenWithInterfaceOrientation:UIInterfaceOrientationLandscapeLeft];
     }else{
@@ -297,7 +308,7 @@ static NSString *const indentifer=@"Cell";
 }
 
 //关闭视频播放
-- (void)closeTheVideo:(NSNotification *)notice{
+- (void)closeTheVideo:(UIButton *)btn{
     VideoCell *currentCell=[self.tableview cellForRowAtIndexPath:self.currentIndexPath];
     [currentCell.playBtn.superview bringSubviewToFront:currentCell.playBtn];
     [self releaseXWPlayer];
@@ -327,18 +338,7 @@ static NSString *const indentifer=@"Cell";
 }
 
 - (void)releaseXWPlayer{
-    [self.xwPlayer setVideoURLStr:@""];
-    [self.xwPlayer.player pause];
-    [self.xwPlayer.player.currentItem cancelPendingSeeks];
-    [self.xwPlayer.player.currentItem.asset cancelLoading];
-    [self.xwPlayer removeFromSuperview];
-    [self.xwPlayer.playerView removeFromSuperview];
+    [self.xwPlayer resetXWPlayer];
     self.xwPlayer=nil;
-    self.xwPlayer.player=nil;
-    self.xwPlayer.playerView=nil;
-    self.xwPlayer.currentItem=nil;
-    self.xwPlayer.playOrPauseBtn=nil;
-    self.xwPlayer.bottomView=nil;
-    self.currentIndexPath=nil;
 }
 @end

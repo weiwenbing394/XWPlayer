@@ -7,9 +7,9 @@
 //
 
 #import "DetailViewController.h"
-#import "XWPlayer.h"
 
-@interface DetailViewController (){
+
+@interface DetailViewController ()<XWPlayerDelegate>{
     UIButton *playButton;
     UIImageView *playImageView;
 }
@@ -38,24 +38,42 @@
     playButton.center=CGPointMake(playImageView.frame.size.width/2.0, playImageView.frame.size.height/2.0);
     [playImageView addSubview:playButton];
     
-    self.xwPlayer=[[XWPlayer alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenWidth*3/4.0) videoURLStr:self.urlStr];
+    XWPlayer *player=[[XWPlayer alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenWidth*3/4.0)];
+    
+    [player setVideoURLStr:self.urlStr];
+    
+    player.xwDelegate=self;
+    
+    self.xwPlayer=player;
+    
     [playImageView addSubview:self.xwPlayer];
     
-    //注册播放完成通知
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(videoDidFinished:) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
-    //注册全屏播放通知
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(fullScreenBtnClick:) name:@"fullScreenBtnClickNotice" object:nil];
 }
 
+#pragma mark XWPlayerDelegate
+//点击关闭按钮代理方法
+-(void)xwplayer:(XWPlayer *)xwplayer clickedCloseButton:(UIButton *)closeBtn{
+    
+};
+//点击全屏按钮代理方法
+-(void)xwplayer:(XWPlayer *)xwplayer clickedFullScreenButton:(UIButton *)fullScreenBtn{
+    [self fullScreenBtnClick:fullScreenBtn];
+};
+//播放完毕的代理方法
+-(void)xwplayerFinishedPlay:(XWPlayer *)xwplayer{
+    [self videoDidFinished];
+};
+
+
 //注册播放完成通知
-- (void)videoDidFinished:(UIButton *)sender{
+- (void)videoDidFinished{
     [self.view sendSubviewToBack:self.xwPlayer];
     [self releaseXWPlayer];
 }
 
 //注册全屏播放通知
-- (void)fullScreenBtnClick:(NSNotification *)notice{
-    UIButton *fullScreenBtn=(UIButton *)[notice object];
+- (void)fullScreenBtnClick:(UIButton *)fullBtn{
+    UIButton *fullScreenBtn=fullBtn;
     if (fullScreenBtn.isSelected) {
         [self toFullScreenWithInterfaceOrientation:UIInterfaceOrientationLandscapeLeft];
     }else{
@@ -124,7 +142,6 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    NSLog(@"监听播放器");
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(onDeviceOrientationChange:) name:UIDeviceOrientationDidChangeNotification object:nil];
 }
 
@@ -170,7 +187,11 @@
 //重新播放
 - (void)rePlay:(UIButton *)btn{
     [self.view sendSubviewToBack:playButton];
-    self.xwPlayer=[[XWPlayer alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenWidth*3/4.0) videoURLStr:self.urlStr];
+    XWPlayer *player=[[XWPlayer alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenWidth*3/4.0)];
+    [player setVideoURLStr:self.urlStr];
+    player.xwDelegate=self;
+    self.xwPlayer=player;
+    
     self.xwPlayer.closeBtn.hidden=YES;
     [playImageView addSubview:self.xwPlayer];
 }
@@ -183,18 +204,8 @@
 }
 
 - (void)releaseXWPlayer{
-    [self.xwPlayer setVideoURLStr:@""];
-    [self.xwPlayer.player pause];
-    [self.xwPlayer.player.currentItem cancelPendingSeeks];
-    [self.xwPlayer.player.currentItem.asset cancelLoading];
-    [self.xwPlayer removeFromSuperview];
-    [self.xwPlayer.playerView removeFromSuperview];
+    [self.xwPlayer resetXWPlayer];
     self.xwPlayer=nil;
-    self.xwPlayer.player=nil;
-    self.xwPlayer.playerView=nil;
-    self.xwPlayer.currentItem=nil;
-    self.xwPlayer.playOrPauseBtn=nil;
-    self.xwPlayer.bottomView=nil;
 }
 
 - (void)dealloc{

@@ -27,6 +27,12 @@
 
 @property (nonatomic, assign) NSInteger index;
 
+@property (nonatomic,strong) NSTimer *giftTimer;
+
+@property (nonatomic,strong) NSTimer *heartTimer;
+
+@property (nonatomic,strong) NSTimer *barrangeTimer;
+
 
 @end
 
@@ -49,7 +55,7 @@
     UIVisualEffectView *effectView=[[UIVisualEffectView alloc]initWithEffect:effect];
     effectView.frame=loadImageView.bounds;
     [loadImageView addSubview:effectView];
-    [self.view addSubview:loadImageView];
+    [self.view insertSubview:loadImageView atIndex:0];
 }
 
 //添加播放界面
@@ -109,16 +115,16 @@
     }
     __weak typeof(self) weakSelf=self;
     //爱心
-    [NSTimer scheduledTimerWithTimeInterval:0.1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+    _heartTimer= [NSTimer scheduledTimerWithTimeInterval:0.1 repeats:YES block:^(NSTimer * _Nonnull timer) {
         [weakSelf rotation];
     }];
     //弹幕
-    [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+    _barrangeTimer= [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
         [weakSelf autoSendBarrage];
         [weakSelf.renderer start];
     }];
     //保时捷礼物
-    [NSTimer scheduledTimerWithTimeInterval:3 repeats:YES block:^(NSTimer * _Nonnull timer) {
+    _giftTimer= [NSTimer scheduledTimerWithTimeInterval:3 repeats:YES block:^(NSTimer * _Nonnull timer) {
         [weakSelf showMyPorsche918];
     }];
 }
@@ -225,6 +231,7 @@ static int _fishIndex = 0;
 
 //添加通知
 - (void)installMovieNotificationObservers {
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(loadStateDidChange:)
                                                  name:IJKMPMoviePlayerLoadStateDidChangeNotification
@@ -285,9 +292,6 @@ static int _fishIndex = 0;
 
 - (void)moviePlayBackStateDidChange:(NSNotification*)notification {
     
-    UIImageView *loadImageView=[self.view viewWithTag:1000];
-    loadImageView.hidden = YES;
-    
     switch (_player.playbackState) {
             
         case IJKMPMoviePlaybackStateStopped:
@@ -341,11 +345,49 @@ static int _fishIndex = 0;
 
 - (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
+    [self removeMovieNotificationObservers];
+    
     [self.player pause];
     [self.player stop];
     [self.player shutdown];
-    [self removeMovieNotificationObservers];
+    [self.player.view removeFromSuperview];
+    self.player=nil;
+    
     [self.renderer stop];
+    [self.renderer.view removeFromSuperview];
+    self.renderer=nil;
+    self.renderer.view=nil;
+    
+    [_giftTimer invalidate];
+    _giftTimer=nil;
+    [_heartTimer invalidate];
+    _heartTimer=nil;
+    [_barrangeTimer invalidate];
+    _barrangeTimer=nil;
+}
+
+
+- (void)dealloc{
+
+    [self removeMovieNotificationObservers];
+    
+    [self.player pause];
+    [self.player stop];
+    [self.player shutdown];
+    [self.player.view removeFromSuperview];
+    self.player=nil;
+    
+    [self.renderer stop];
+    [self.renderer.view removeFromSuperview];
+    self.renderer=nil;
+    self.renderer.view=nil;
+    
+    [_giftTimer invalidate];
+    _giftTimer=nil;
+    [_heartTimer invalidate];
+    _heartTimer=nil;
+    [_barrangeTimer invalidate];
+    _barrangeTimer=nil;
 }
 
 - (void)didReceiveMemoryWarning {

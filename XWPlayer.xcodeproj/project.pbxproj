@@ -20,6 +20,8 @@
 		514FAF851E07D33D00C4021F /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 514FAF841E07D33D00C4021F /* PlayerViewController.m */; };
 		514FAF8A1E07D8CB00C4021F /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 514FAF891E07D8CB00C4021F /* libbz2.tbd */; };
 		514FAF8C1E07D8D600C4021F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 514FAF8B1E07D8D600C4021F /* libz.tbd */; };
+		516F9BB21E1C93AB00ED8931 /* NetEaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 516F9BB01E1C93AB00ED8931 /* NetEaseViewController.m */; };
+		516F9BB31E1C93AB00ED8931 /* NetEaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 516F9BB11E1C93AB00ED8931 /* NetEaseViewController.xib */; };
 		518839FF1E00E31100624E36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 518839FE1E00E31100624E36 /* main.m */; };
 		51883A021E00E31100624E36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51883A011E00E31100624E36 /* AppDelegate.m */; };
 		51883A081E00E31100624E36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51883A061E00E31100624E36 /* Main.storyboard */; };
@@ -96,8 +98,6 @@
 		51883B071E02430900624E36 /* TencentNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51883B051E02430900624E36 /* TencentNewsViewController.xib */; };
 		51883B0B1E02432000624E36 /* SinaNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51883B091E02432000624E36 /* SinaNewsViewController.m */; };
 		51883B0C1E02432000624E36 /* SinaNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51883B0A1E02432000624E36 /* SinaNewsViewController.xib */; };
-		51883B141E0248DF00624E36 /* NetEaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51883B121E0248DF00624E36 /* NetEaseViewController.m */; };
-		51883B151E0248DF00624E36 /* NetEaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51883B131E0248DF00624E36 /* NetEaseViewController.xib */; };
 		51883B181E03CE7100624E36 /* TBPlayerLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51883B171E03CE7100624E36 /* TBPlayerLayerView.m */; };
 		51BB31861E08CB090037EEB2 /* StartLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BB31851E08CB090037EEB2 /* StartLiveViewController.m */; };
 		51BB31891E08CE1C0037EEB2 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BB31881E08CE1C0037EEB2 /* MyViewController.m */; };
@@ -153,6 +153,9 @@
 		514FAF841E07D33D00C4021F /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		514FAF891E07D8CB00C4021F /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		514FAF8B1E07D8D600C4021F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		516F9BAF1E1C93AB00ED8931 /* NetEaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetEaseViewController.h; sourceTree = "<group>"; };
+		516F9BB01E1C93AB00ED8931 /* NetEaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetEaseViewController.m; sourceTree = "<group>"; };
+		516F9BB11E1C93AB00ED8931 /* NetEaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetEaseViewController.xib; sourceTree = "<group>"; };
 		518839FA1E00E31100624E36 /* XWPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XWPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		518839FE1E00E31100624E36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		51883A001E00E31100624E36 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -294,9 +297,6 @@
 		51883B091E02432000624E36 /* SinaNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaNewsViewController.m; sourceTree = "<group>"; };
 		51883B0A1E02432000624E36 /* SinaNewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SinaNewsViewController.xib; sourceTree = "<group>"; };
 		51883B101E02478900624E36 /* WMPlayer.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlayer.pch; sourceTree = "<group>"; };
-		51883B111E0248DF00624E36 /* NetEaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetEaseViewController.h; sourceTree = "<group>"; };
-		51883B121E0248DF00624E36 /* NetEaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetEaseViewController.m; sourceTree = "<group>"; };
-		51883B131E0248DF00624E36 /* NetEaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetEaseViewController.xib; sourceTree = "<group>"; };
 		51883B161E03CE7100624E36 /* TBPlayerLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBPlayerLayerView.h; sourceTree = "<group>"; };
 		51883B171E03CE7100624E36 /* TBPlayerLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBPlayerLayerView.m; sourceTree = "<group>"; };
 		51BB31841E08CB090037EEB2 /* StartLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartLiveViewController.h; sourceTree = "<group>"; };
@@ -764,9 +764,9 @@
 				51883B0A1E02432000624E36 /* SinaNewsViewController.xib */,
 				51BB36F01E09247D0037EEB2 /* DetailViewController.h */,
 				51BB36F11E09247D0037EEB2 /* DetailViewController.m */,
-				51883B111E0248DF00624E36 /* NetEaseViewController.h */,
-				51883B121E0248DF00624E36 /* NetEaseViewController.m */,
-				51883B131E0248DF00624E36 /* NetEaseViewController.xib */,
+				516F9BAF1E1C93AB00ED8931 /* NetEaseViewController.h */,
+				516F9BB01E1C93AB00ED8931 /* NetEaseViewController.m */,
+				516F9BB11E1C93AB00ED8931 /* NetEaseViewController.xib */,
 				514FAF831E07D33D00C4021F /* PlayerViewController.h */,
 				514FAF841E07D33D00C4021F /* PlayerViewController.m */,
 				51BB31841E08CB090037EEB2 /* StartLiveViewController.h */,
@@ -922,6 +922,7 @@
 				51883AD81E00E53900624E36 /* message_s@2x.png in Resources */,
 				51883ADF1E00E53900624E36 /* video_play_btn_bg@2x.png in Resources */,
 				51883AD51E00E53900624E36 /* found_s@2x.png in Resources */,
+				516F9BB31E1C93AB00ED8931 /* NetEaseViewController.xib in Resources */,
 				51883AD41E00E53900624E36 /* close@2x.png in Resources */,
 				51883AE81E00E5DB00624E36 /* VideoCell.xib in Resources */,
 				51883AD91E00E53900624E36 /* message@2x.png in Resources */,
@@ -932,7 +933,6 @@
 				51883A8F1E00E45D00624E36 /* MJRefresh.bundle in Resources */,
 				51883B071E02430900624E36 /* TencentNewsViewController.xib in Resources */,
 				51883AD71E00E53900624E36 /* logo.png in Resources */,
-				51883B151E0248DF00624E36 /* NetEaseViewController.xib in Resources */,
 				51883ADC1E00E53900624E36 /* share_s@2x.png in Resources */,
 				51883B0C1E02432000624E36 /* SinaNewsViewController.xib in Resources */,
 				514FAED71E07C55A00C4021F /* .gitignore in Resources */,
@@ -1031,7 +1031,6 @@
 				51883ABE1E00E46E00624E36 /* MASViewAttribute.m in Sources */,
 				51883AA01E00E45D00624E36 /* UIImageView+WebCache.m in Sources */,
 				51883AF41E00E67A00624E36 /* XWPlayer.m in Sources */,
-				51883B141E0248DF00624E36 /* NetEaseViewController.m in Sources */,
 				51883A871E00E45D00624E36 /* MJRefreshAutoNormalFooter.m in Sources */,
 				51883A951E00E45D00624E36 /* SDImageCache.m in Sources */,
 				51883ABB1E00E46E00624E36 /* MASConstraint.m in Sources */,
@@ -1058,6 +1057,7 @@
 				51883A941E00E45D00624E36 /* NSData+ImageContentType.m in Sources */,
 				514FAEE71E07C62D00C4021F /* CustomButton.m in Sources */,
 				514FAEDE1E07C5D000C4021F /* PlayerModel.m in Sources */,
+				516F9BB21E1C93AB00ED8931 /* NetEaseViewController.m in Sources */,
 				51883B0B1E02432000624E36 /* SinaNewsViewController.m in Sources */,
 				51883AC21E00E46F00624E36 /* View+MASAdditions.m in Sources */,
 				514FAEDA1E07C55A00C4021F /* README.md in Sources */,
