@@ -27,13 +27,11 @@
 
 - (void)closeSelf{
     [preview.session stopLive];
+    [preview removeFromSuperview];
+    preview=nil;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-//- (void)viewDidDisappear:(BOOL)animated{
-//    [super viewDidDisappear:animated];
-//    [preview.session stopLive];
-//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
